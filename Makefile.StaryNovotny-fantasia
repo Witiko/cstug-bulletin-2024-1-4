@@ -20,12 +20,7 @@ clear: $(DOCUMENT)
 
 %.pdf: %.tex FORCE
 	rm -f $(basename $@).bbl $(basename $@).pax
-	# Remove images `transition-*.jpg`, so they have to be recreated by the following command `make`.
-	rm -f images/transition/transition-*.jpg
 	$(DOCKER) $(IMAGE) $(MAKE) -C .
-	# Optimize the images `transition-*.jpg`.
-	mogrify -resize 468x288\> -quality 100% images/transition/transition-*.jpg
-	jpegoptim -m85 images/transition/transition-*.jpg
 	# Convert image `camcorder-minterpolate-yadif.pdf` to grayscale for printing.
 	grep -F '\csbul@webtrue' $(basename $@).info || (cp -v images/camcorder-minterpolate-yadif.pdf images/camcorder-minterpolate-yadif.pdf.bak && ../pdf-to-grayscale.sh images/camcorder-vidstabdetect-vidstabtransform.pdf images/camcorder-minterpolate-yadif.pdf)
 	$(DOCKER) $(IMAGE) $(LATEXMK) $<
