@@ -1,0 +1,24 @@
+.PHONY: all do-once-at-the-start preview clear FORCE
+
+DOCKER = docker run --rm -u $(shell id -u):$(shell id -g) --env TEXMFVAR=/var/tmp/texmf-var -v "$$PWD"/..:/workdir -w /workdir/"$$(basename "$$PWD")"
+IMAGE = texlive/texlive:TL2024-historic-with-cache
+LATEXMK = latexmk -lualatex -f
+DOCUMENT = starynovotny-tug2024.tex
+
+all: $(basename $(DOCUMENT)).pdf
+
+do-once-at-the-start: FORCE
+	mogrify -resize 1500x2100\> -quality 100% figs/*.jpg
+	jpegoptim -m85 figs/*.jpg
+
+preview: $(DOCUMENT)
+	$(DOCKER) $(IMAGE) $(LATEXMK) -pvc $<
+
+clear: $(DOCUMENT)
+	$(DOCKER) $(IMAGE) $(LATEXMK) -C $<
+
+%.pdf: %.tex FORCE
+	rm -f $(basename $@).bbl $(basename $@).pax
+	$(DOCKER) $(IMAGE) $(LATEXMK) $<
+	touch $(basename $@).info
+	! grep -F '\csbul@webtrue' $(basename $@).info || $(DOCKER) $(IMAGE) pdfannotextractor $@

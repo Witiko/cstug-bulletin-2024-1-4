@@ -1,0 +1,22 @@
+.PHONY: all do-once-at-the-start preview clear FORCE
+
+DOCKER = docker run --rm -u $(shell id -u):$(shell id -g) --env TEXMFVAR=/var/tmp/texmf-var -v "$$PWD"/..:/workdir -w /workdir/"$$(basename "$$PWD")"
+IMAGE = texlive/texlive:TL2023-historic-with-cache
+LATEXMK = latexmk -lualatex -shell-escape -f
+DOCUMENT = peischl-pipeline.tex
+
+all: $(basename $(DOCUMENT)).pdf
+
+do-once-at-the-start: FORCE
+
+preview: $(DOCUMENT)
+	$(DOCKER) $(IMAGE) $(LATEXMK) -pvc $<
+
+clear: $(DOCUMENT)
+	$(DOCKER) $(IMAGE) $(LATEXMK) -C $<
+
+%.pdf: %.tex FORCE
+	rm -f $(basename $@).bbl $(basename $@).pax
+	$(DOCKER) $(IMAGE) $(LATEXMK) $<
+	touch $(basename $@).info
+	! grep -F '\csbul@webtrue' $(basename $@).info || $(DOCKER) $(IMAGE) pdfannotextractor $@

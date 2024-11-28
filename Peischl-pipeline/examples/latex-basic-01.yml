@@ -1,0 +1,18 @@
+name: latexmk
+on: [push]
+jobs:
+  action-test:
+    runs-on: ubuntu-latest
+    container:
+      image: texlive/texlive:latest
+    steps:
+      - name: Stáhni repozitář
+        uses: actions/checkout@v4
+      - name: Zkompiluj LaTeXové dokumenty
+        run: "latexmk --lualatex"
+      - name: Ulož dokumentaci
+        uses: actions/upload-artifact@v4
+        with:
+          name: Documentation
+          path: "./*.pdf"
+          retention-days: 3

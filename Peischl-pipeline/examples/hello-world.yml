@@ -1,0 +1,7 @@
+name: Ukázkový postup GitHub Actions
+on: [push]
+jobs:
+  ukázková-úloha:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Ahoj světe! 🦁🦆"

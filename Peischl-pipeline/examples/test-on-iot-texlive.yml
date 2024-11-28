@@ -1,0 +1,10 @@
+jobs:
+  testování-s-IoT-obrazy-TeX-Live:
+    runs-on: ubuntu-22.04
+    strategy:
+      matrix:
+        tag: ["TL2022-historic", "TL2023-historic", "latest"]
+    name: "Test s TeX Live ${{ matrix.tag }}"
+    container:
+      tag: texlive/texlive:${{ matrix.tag }}
+    steps:

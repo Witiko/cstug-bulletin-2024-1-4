@@ -1,0 +1,784 @@
+% Při kompilaci dokumentu LuaLaTeXem dojde k chybě, protože
+% nedefinuje \pdfpagewidth a \pdfpageheight. 
+% Balíček luatex85 to napravuje.
+\RequirePackage{luatex85}
+\PassOptionsToPackage{shorthands=off}{babel}
+\makeatletter
+\disable@package@load{fontenc}
+\makeatother
+\let\oldlooseness=\looseness
+\documentclass{csbulletin}
+% \usepackage[T1]{fontenc}
+% \usepackage[utf8]{inputenc}
+% \usepackage{fontspec}
+% \setmainfont[Ligatures={TeX,Rare}]{Latin Modern Roman}
+\selectlanguage{czech}
+\usepackage{luavlna}
+\usepackage[noautomatic]{responsive}
+\usepackage{lua-widow-control}
+\usepackage{csquotes}
+\usepackage{linebreaker}
+\usepackage{amsmath,amsfonts}
+
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{lipsum}
+
+
+\usepackage[
+  backend=biber,
+  style=iso-numeric,
+  sortlocale=cs,
+  autolang=other,
+  bibencoding=UTF8,
+  mincitenames=2,
+  maxcitenames=2,
+  isbn=false,
+]{biblatex}
+\addbibresource{responsive.bib}
+\usepackage[
+  implicit=false,
+  hidelinks,
+]{hyperref}
+
+
+\newcommand\balicek[1]{\textit{#1}}
+\newcommand\program[1]{#1}
+
+% pro případ, kdy je \lipsum moc velké 
+\newcommand\smalllipsum{%
+Lorem ipsum dolor sit amet,
+consectetuer adipiscing elit.
+Ut purus elit, vestibulum ut,
+placerat ac, adipiscing vitae,
+felis. Curabitur dictum gravida 
+mauris. Nam arcu libero, nonummy 
+eget, consectetuer id, vulputate 
+a, magna. Donec vehicula augue eu neque.
+}
+
+\newcommand\printsize[1]{\csname #1\endcsname\par\noindent Sample\par}
+\newcommand\showscale[2][.5\textwidth]{%
+      % \setsizes[38]{25}
+      \printsize{huge}
+      \printsize{LARGE}
+      \printsize{Large}
+      \printsize{large}
+      \hrule
+      \printsize{normalsize}
+      \hrule
+      \printsize{small}
+      \printsize{footnotesize}
+}
+
+
+\begin{document}
+
+\title{Responzivní design a automatická sazba s Lua\LaTeX em}
+\EnglishTitle{Responsive Design and Automatic Typesetting with Lua\LaTeX}
+\author{Michal Hoftich}
+\podpis{Michal Hoftich, \url{michal.h21@gmail.com}}
+\maketitle
+
+\begin{abstract}
+Tento článek představuje využití metod responzivního designu a pokročilých vlastností
+Lua\LaTeX u pro automatickou sazbu dokumentů určených pro různé cílové výstupy,
+jak tištěné, tak elektronické, například mobilní telefony, tablety nebo čtečky e-knih.
+
+
+Konkrétně se zaměřuje na využití Lua\LaTeX u pro automatizovanou
+sazbu s pomocí balíčků \balicek{Responsive}~\cite{responsive} pro nastavení velikosti písma a řádkování 
+podle velikosti stránky, \balicek{Luavlna}~\cite{luavlna} pro zamezení výskytu jednopísmenných předložek
+na koncích řádků, \balicek{Lua-widow-control}~\cite{lua-widow-control} pro omezení osamocených řádků na koncích a
+začátcích stránek a \balicek{Linebreaker}~\cite{linebreaker}, který brání přetečení řádků.
+
+\end{abstract}
+\klicovaslova: automatická sazba, responzivní design, Lua\LaTeX
+
+\section{Úvod}
+
+Před časem jsem si pořídil čtečku elektronických knih, ale i přesto většinu
+textů čtu z obrazovky svého PC, protože pochází z webových zdrojů. 
+Napadlo mě tedy, že bych si delší články ukládal pro pozdější
+přečtení na čtečce. K tomuto účelu samozřejmě existuje řada aplikací, ale 
+já jsem se rozhodl vytvořit si vlastní, kterou si přizpůsobím přesně svým potřebám
+a preferencím. Další motivací je možnost naučit se něco nového a vytvořit
+balíčky, které budou užitečné i pro další uživatele \TeX u. 
+
+Mým cílem je, aby řešení bylo co nejvíce automatizované, abych například nemusel
+řešit přetečené řádky nebo jiné chyby, které by vyžadovaly ruční zásah. 
+Díky možnostem Lua\LaTeX u je takové řešení již v současnosti možné, 
+jak si ukážeme v následujícím textu.
+
+
+% Protože díky Lua\TeX u je v \TeX ových distribucích dostupný programovací jazyk 
+% Lua, využil jsem ho pro vytvoření svého projektu \program{Rmodepdf} \cite{rmodepdf}.
+% Ten využívá balíček \balicek{LuaXML} \cite{luaxml} pro 
+% transformaci HTML na \TeX{} a příkazy \program{Curl} pro stažení stránky, \program{Tidy} 
+% pro opravu chyb v HTML a \program{Rdrview} \cite{rdrview}, který odstraní
+% ze stránky navigační prvky, reklamy a jiné rušivé elementy. \program{Rdrview} 
+% tak funguje podobně jako mód zobrazení čtečky v prohlížeči \program{Firefox}
+% (ilustrováno v obrázku~\ref{fig:readermode}).
+
+% V následujícím textu se však nezaměřím na samotný program \program{Rmodepdf}, 
+% který stále není ve stavu použitelném pro běžné uživatele.
+% Myslím, že pro čtenáře bude užitečnější popis metod pro automatickou sazbu a responzivního designu,
+% které mohou využít i při sazbě svých vlastních dokumentů.
+
+% \begin{figure}[tbp]
+
+%   \centering
+%   \caption{Ukázka použití režimu \emph{zobrazení čtečky} v prohlížeči \program{Firefox}}
+%   \label{fig:readermode}
+
+%   \begin{subfigure}[t]{0.45\textwidth}
+%     \includegraphics[width=\textwidth]{img/root-balast.png}
+%     \caption{Stránka s ovládacími prvky a reklamami}
+%   \end{subfigure}
+%   \hfill
+%   \begin{subfigure}[t]{0.45\textwidth}
+%     \includegraphics[width=\textwidth]{img/root-čtečka.png}
+%     \caption{Stránka v zobrazení čtečky}
+%   \end{subfigure}
+% \end{figure}
+
+% \section{Jak s pomocí \LaTeX u převést webovou stránku na PDF}
+
+% % https://github.com/eafer/rdrview
+
+% \begin{verbatim}
+% $ rdrview -H <url> | pandoc -f html -t latex -V lang=cs \
+%   --template template.tex output.html > output.tex
+% \end{verbatim}
+
+\section{Responzivní design}
+
+Jedním z problémů, který je třeba řešit, je nastavení správné velikosti písma 
+z hlediska čitelnosti. 
+Výchozí velikost písma v \LaTeX u je 10 bodů bez ohledu na velikost
+stránky. To je vhodná velikost písma pro stránku formátu A5. Pro formát
+A4 by měla být velikost písma větší, pro menší displeje čteček a mobilních
+telefonů může být naopak menší. Stejně tak můžeme změnit řádkování,
+které také ovlivňuje čitelnost textu v závislosti na velikosti písma a 
+stránky.
+
+Podobný problém řeší webové prohlížeče,
+které musí zobrazit text jak na velkých monitorech PC, tak na
+menších displejích notebooků, tabletů a mobilních telefonů. 
+Řešení, které používají, se nazývá \textit{responzivní design}.
+
+
+
+Responzivní design je způsob návrhu webových stránek, který umožňuje
+pružné a dynamické přizpůsobení vzhledu a uspořádání obsahu stránky
+různým zobrazovacím zařízením. Jedním z klíčových prvků responzivního
+designu je flexibilní struktura, která umožňuje přizpůsobit velikost
+prvků na stránce zobrazovacímu zařízení.
+
+Dalším důležitým prvkem jsou \textit{media queries}. 
+Ty umožňují definovat
+pravidla, která se aplikují na základě vlastností zobrazovacího
+zařízení, jako jsou například šířka a výška obrazovky nebo typ výstupu (papír, displej). 
+Díky těmto pravidlům může být stejný kód stránky dobře zobrazen jak na velkém
+monitoru, tak na mobilních zařízeních nebo při tisku. Ukázku reálného využití 
+můžete vidět na Obrázku~\ref{fig:responzivni}.
+
+
+\begin{figure}[tbp]
+\begin{subfigure}[t]{0.74\textwidth}
+    \includegraphics[width=\textwidth]{img/pedf-web-big.png}
+    \caption{Ukázka stránky na velkém monitoru}
+\end{subfigure}
+\hfill
+\begin{subfigure}[t]{0.24\textwidth}
+    \includegraphics[width=\textwidth]{img/pedf-web-small.png}
+    \caption{Ukázka stránky na malém displeji}
+\end{subfigure}
+  \caption{Ukázka zobrazení webové stránky s využitím responzivního designu}\label{fig:responzivni}
+\end{figure}
+
+Balíček \balicek{Responsive}~\cite{responsive} se těmito zásadami inspiruje. 
+Jeho hlavní funkcí je nastavení velikosti písma podle velikosti stránky
+a přibližného počtu znaků, které by se měly vejít na stránku. 
+Dále nastavuje typografickou stupnici (ovlivňuje velikost písma například 
+u nadpisů nebo poznámek pod čarou), písmovou osnovu a podporuje
+jednoduchou verzi media queries.
+
+\subsection{Nastavení balíčku \balicek{Responsive}}
+
+\balicek{Responsive} automaticky nastavuje velikost písma, řádkování 
+a typografickou stupnici na začátku dokumentu. Výchozí hodnoty můžeme změnit
+pomocí voleb balíčku (\verb|\usepackage[<volby>]{responsive}| nebo příkazem \verb|\ResponsiveSetup{<volby>}|. 
+Příkaz \verb|\ResponsiveSetup| můžeme 
+využít i přímo v textu dokumentu, například pro lokální změny nastavení písma. 
+
+Balíček \balicek{Responsive} nabízí následující volby:
+
+\begin{description}
+  \item[noautomatic] – zabrání nastavení velikosti písma a řádkování automaticky na začátku dokumentu.
+  \item[characters] – počet znaků při automatickém nastavení velikosti písma.
+  \item[scale] –  typografická stupnice použitá pro velikosti řezů písma.
+  \item[lineratio] – poměr využitý při výpočtu řádkování.
+\end{description}
+
+\subsection{Základní velikost písma}
+
+Velikost písma můžeme nastavit pomocí příkazu \verb|\setsizes{<počet znaků na|\allowbreak\verb|řádek>}|. 
+\balicek{Responsive} se snaží nastavit velikost písma tak, aby na řádku byl v průměru
+požadovaný počet znaků. Skutečný počet znaků ovšem záleží na použitém textu, 
+neboť při použití proporcionálních fontů má každé písmeno jinou šířku. 
+Ve skutečnosti může být počet znaků zobrazených na řádce mírně vyšší.
+
+Pokud v příkazu \verb|\setsizes| neuvedeme počet znaků, použije se hodnota volby \texttt{characters}.
+Následující příklad využívá právě nastavení této volby. Obrázek~\ref{fig:fontsize} 
+ukazuje, jak se stejný text může v daném rámci zobrazit rozdílně v závislosti na
+nastavených volbách.
+
+\begin{verbatim}
+\begin{minipage}{5cm}
+\ResponsiveSetup{characters=55}
+\setsizes{}
+\lipsum[1]
+\end{minipage}}
+\end{verbatim}
+
+\begin{figure}[tbp]
+  \begin{subfigure}[t]{0.45\textwidth}
+\fbox{%
+\begin{minipage}{5cm}
+\ResponsiveSetup{characters=55}
+\setsizes{}
+
+\lipsum[1]
+
+\end{minipage}}
+\caption{\texttt{characters=55}}
+\end{subfigure}
+\hfill
+\begin{subfigure}[t]{0.45\textwidth}
+\fbox{%
+\begin{minipage}{5cm}
+\ResponsiveSetup{lineratio=38,characters=25}
+\setsizes{}
+
+Lorem ipsum dolor sit amet,
+consectetuer adipiscing elit.
+Ut purus elit, vestibulum ut,
+placerat ac, adipiscing vitae,
+felis. Curabitur dictum gravida 
+mauris. Nam arcu libero, nonummy 
+eget, consectetuer id, vulputate 
+a, magna. Donec vehicula augue eu neque.
+
+\end{minipage}}
+\caption{\texttt{characters=25, lineratio=38}}
+\end{subfigure}
+  \caption{Rozdíl velikosti písma v závislosti na počtu znaků na řádku}\label{fig:fontsize}
+\end{figure}
+
+\subsection{Řádkování}
+
+V základním nastavení \LaTeX u je řádkování nastaveno
+na velikost písma násobenou hodnotou 1,2. Pro jiná 
+písma a velikosti stránky může být vhodná jiná velikost řádkování.
+Stejně tak mohou být vhodné rozdílné hodnoty pro tištěnou a elektronickou 
+verzi dokumentu. 
+
+Inspiroval jsem se článkem Edoarda Cavazza~\cite{cavazza} o čitelnosti
+a přidal podporu pro nastavení řádkování na základě poměru výšky 
+malých písmen a proměnné \texttt{lineratio}. Ten se získá následujícím 
+výpočtem: 
+
+\[\text{řádkování} = \frac{1\text{ex}}{\text{lineratio}/ 100}\]
+
+Jaký vliv mají změny hodnoty \texttt{lineratio}, můžete pozorovat na Obrázku~\ref{fig:lineratio}. 
+Volba její optimální hodnoty závisí na použitém písmu i velikosti stránky. 
+Pro dosažení maximální čitelnosti výstupu je vhodné porovnat výstup 
+při použití různých hodnot.
+
+
+
+\begin{figure}[tbp]
+  \begin{subfigure}[b]{0.45\textwidth}
+\fbox{%
+\begin{minipage}{5cm}
+\ResponsiveSetup{lineratio=38}
+\setsizes{65}
+
+\lipsum[1]
+
+\end{minipage}}
+\caption{lineratio=38}
+\end{subfigure}
+\begin{subfigure}[b]{0.45\textwidth}
+\fbox{%
+\begin{minipage}{5cm}
+\ResponsiveSetup{lineratio=34}
+\setsizes{65}
+
+\lipsum[1]
+
+\end{minipage}}
+\caption{lineratio=34}
+\end{subfigure}
+  \caption{Změna řádkování změnou hodnoty \texttt{lineratio}}\label{fig:lineratio}
+\end{figure}
+
+\subsection{Typografická stupnice}
+
+Typografická stupnice je soubor předem stanovených velikostí písma, které jsou
+používány pro vytváření jednotného vizuálního stylu dokumentu nebo webové
+stránky. Tyto velikosti jsou obvykle vyjádřeny v bodové jednotce a postupně se
+zvětšují nebo zmenšují o konkrétní interval, který leží na stupnici.
+
+Typografická stupnice může obsahovat velikosti pro nadpisy, poznámky pod čarou a běžný
+text. Správné používání typografické stupnice pomáhá vytvořit vizuální
+hierarchii, která zlepšuje čitelnost a estetický dojem textu. 
+Více informací o typografických stupnicích naleznete v článku Spencera
+Mortensena~\cite{mortensen}. 
+
+V \LaTeX u je typografická stupnice dostupná pomocí příkazů jako \verb|\large|,
+\verb|\Large|, \verb|\LARGE|, \verb|\huge|, nebo třeba \verb|\scriptsize|.
+Každý z těchto příkazů je od předešlé velikosti vzdálený o jeden interval.
+Výchozí stupnice v balíčku \balicek{Responsive} je nejbližší stupnici použité
+v \LaTeX u.  V Mortensenově článku se nazývá \textit{tetratonická}. Balíček
+nabízí i další stupnice popsané v článku, například \textit{golden}, založenou
+na zlatém řezu. Efekt použití stupnice je zobrazen na
+Obrázku~\ref{fig:stupnice}.
+
+\begin{figure}[bp]
+\centering
+  \begin{subfigure}[b]{0.45\textwidth}
+\fbox{%
+\begin{minipage}{5cm}
+\setsizes{45}
+
+\showscale{}
+
+\end{minipage}}
+\caption{Výchozí stupnice}
+\end{subfigure}
+\begin{subfigure}[b]{0.45\textwidth}
+\begin{verbatim}
+\ResponsiveSetup{scale=golden}
+\end{verbatim}
+\fbox{%
+\begin{minipage}{5cm}
+\ResponsiveSetup{scale=golden}
+\setsizes{45}
+
+\showscale
+
+\end{minipage}}
+\caption{Stupnice založená na zlatém řezu}
+\end{subfigure}
+  \caption{Ukázka typografických stupnic (výchozí velikost písma je zvýrazněna linkami)}\label{fig:stupnice}
+\end{figure}
+
+Můžeme však definovat i vlastní stupnici. Například následující kód definuje stupnici,
+na které se velikost textu zdvojnásobí (\verb|ratio=2|) za tři kroky (\verb|number=3|).
+Při definici vlastních voleb stupnice je třeba zadat hodnotu \verb|scale=none|.
+Příkaz \verb|\setsizes| poté redefinuje velikosti písem.
+
+
+\begin{verbatim}
+\ResponsiveSetup{ratio=2, number=3, scale=none}
+\setsizes{}
+\end{verbatim}
+
+\subsection{Media queries}
+
+Media queries jsou technikou, která umožňuje webovým vývojářům dynamicky
+přizpůsobovat vzhled a chování webových stránek na základě různých vlastností
+zařízení, jako jsou například šířka a výška obrazovky, orientace zařízení,
+podpora barev a mnoho dalších. Díky těmto podmínkám lze
+vytvářet responzivní a flexibilní webové stránky, které se dokážou automaticky
+přizpůsobovat různým typům a velikostem zařízení, na kterých jsou zobrazovány.
+
+Jak může být tato technika užitečná pro autory \LaTeX ových balíčků? 
+Mohli by například nastavit velikost písma, řádkování a dalších prvků
+pro určité rozměry stránky. 
+Poté, co uživatel zvolí velikost stránky podle velikosti zařízení, pro které 
+chce dokument zkompilovat, nastaví se tyto prvky automaticky.
+% Uživatel si poté nastaví výslednou velikost stránky
+% ve svém dokumentu a  pomocí media queries se automaticky nastaví tyto prvky podle 
+% rozměrů stránky. 
+Autor balíčku může například definovat, že pokud je šířka textového řádku menší
+než určitý rozměr, zobrazí se na něm méně znaků než na řádcích delších. Výsledek je zobrazen 
+na Obrázku~\ref{fig:mediaguery}.
+
+Media query můžeme deklarovat pomocí příkazu \verb|\mediaquery|, který očekává tři 
+parametry -- první je seznam testů, další parametr poté očekává kód, který se vykoná,
+pokud se testy vyhodnotí jako pravdivé, poslední pak kód spuštěný při nesplněné 
+podmínce. Kód může obsahovat příkaz \verb|\ResponsiveSetup|, ale i libovolné
+jiné příkazy. Například nastavení velikosti textového bloku, záhlaví a zápatí pomocí 
+balíčku \balicek{Geometry}.
+
+
+\begin{figure}[btp]
+\begin{verbatim}
+\mediaquery{max-textwidth=4cm}
+{\ResponsiveSetup{characters=45}}
+{\ResponsiveSetup{characters=60}}
+\end{verbatim}
+\begin{subfigure}[b]{0.45\textwidth}
+\fbox{%
+\begin{minipage}{5cm}
+\mediaquery{max-textwidth=4cm}
+{\ResponsiveSetup{characters=45}}
+{\ResponsiveSetup{characters=60}}
+\setsizes{}
+
+% \lipsum[1]
+\smalllipsum
+
+\end{minipage}}
+\caption{Šířka textu 5\,cm}
+\end{subfigure}
+\hfill
+  \begin{subfigure}[b]{0.45\textwidth}
+    \centering
+\fbox{%
+\begin{minipage}{3.9cm}
+\mediaquery{max-textwidth=4cm}
+{\ResponsiveSetup{characters=45}}
+{\ResponsiveSetup{characters=60}}
+\setsizes{}
+
+\smalllipsum
+% \lipsum[1]
+
+\end{minipage}}
+\caption{Šířka textu 3,9\,cm}
+\end{subfigure}
+  \caption{Příklad Media Query, která zobrazí méně znaků na řádku, pokud je šířka textu menší než 4\,cm}\label{fig:mediaguery}
+\end{figure}
+
+Můžeme testovat následující vlastnosti stránky: \texttt{paperwidth} a
+\texttt{paperheight} pro rozměry stránky, \texttt{textwidth} a \texttt{textheight} pro 
+rozměry textu, \texttt{orientation} pro orientaci textu a \texttt{twocolumn} pro 
+detekci použití dvou sloupců textu v dokumentu.
+
+Testy pro rozměry textu a stránky podporují také předpony \texttt{max-} a \texttt{min-}.
+Pomocí nich můžeme testovat, zda daný rozměr je menší nebo větší
+než zadaná hodnota.
+
+Například následující příkaz změní barvu textu na modrou za podmínky, že dokument 
+má orientaci stránky na šířku, šířka textu je menší než 20\,cm a používají se dva sloupce.
+
+\begin{verbatim}
+\mediaquery{orientation=landscape,
+max-textwidth=20cm,
+twocolumn=true}{\color{blue}}{}
+\end{verbatim}
+
+
+\section{Automatická sazba}
+
+Lua\TeX\ nám umožňuje automaticky řešit některé problémy, které bylo v
+minulosti třeba řešit ručním zásahem do dokumentu. Díky tomu, že proces sazby
+lze ovlivňovat pomocí callbacků v jazyce Lua, můžeme například omezit výskyt
+takových typografických chyb, jako jsou vdovy a sirotci, jednopísmenné předložky
+na koncích řádků nebo špatně zalomené odstavce. V této sekci si ukážeme
+několik balíčků, které tyto chyby řeší.
+
+
+
+
+
+\subsection{Balíček \balicek{Luavlna}}
+
+Podle českých a slovenských typografických zvyklostí by se na koncích řádků
+neměly vyskytovat jednopísmenné předložky nebo spojky. 
+Tomu se dá v \TeX u zabránit vložením znaku \verb|~| mezi předložku a
+následující slovo. Pro zjednodušení této činnosti existuje
+několik nástrojů, například program \balicek{Vlna} Petra Olšáka nebo balíček
+\balicek{Encxvlna} vytvořený také Petrem Olšákem a Zdeňkem Wagnerem.
+
+Balíček \balicek{Luavlna} \cite{luavlna} využívá možnosti Lua\TeX u pro úpravu
+plně zpracovaných uzlů textu před zalomením do odstavců. 
+V tomto stadiu jsou již všechna makra expandována, nezlomitelná mezera
+tedy může být snadno vložena na všechna místa, kde by se měla nacházet.
+
+\balicek{Luavlna} zamezuje zalomení řádků v následujících situacích:
+
+\begin{itemize}
+  \item za jednoznakovými předložkami a spojkami
+  \item u iniciál
+  \item u akademických titulů
+  \item mezi čísly a jednotkami
+\end{itemize}
+  
+
+\begin{figure}
+  \centering
+  \begin{minipage}{3in}
+
+    \preventsingledebugon
+
+    Text s krátkými souhláskami a samohláskami i dalšími jevy
+    z nabídky možností (v textu možnými).
+
+    Co třeba í znaky š diakritikou?
+
+    Různé možnosti [v závorkách \textless i jiných znacích
+
+    Podpora iniciál a titulů: M. J. Hegel, Ing. Běháková, Ph.D., Ž. Zíbrt,
+    Ch. Borner.
+
+    Podpora jednotek: 100,5 MN\cdot{}s, 100,5 kJ, 200 µA, $-1$ dag, 1\,MB. 
+
+    Uvnitř matematiky by mělo být zpracování vypnuté: $k \in \mathbb N$.
+
+    \preventsingledebugoff
+  \end{minipage}
+  \caption{Ukázka užití balíčku Luavlna}\label{fig:luavlna}
+\end{figure}
+
+
+Ukázku použití balíčku můžete vidět na Obrázku~\ref{fig:luavlna}. 
+Volby se zadávají pouze pomocí voleb balíčku: \verb|\usepackage[<volby>]{luavlna}|.
+Nezlomitelné mezery jsou zvýrazněné růžově díky použití volby \texttt{debug}. Balíček
+nabízí řadu dalších voleb, například pro zakázání vkládání nezlomitelných 
+mezer v určitých situacích:
+
+\begin{description}
+  \item [noprocess] – nespouštět zpracování dokumentu automaticky
+  \item [noinitials] – nezpracovávat iniciály
+  \item [nounits] – nezpracovávat SI jednotky
+  \item [nopredegrees] – nezpracovávat tituly před jménem
+  \item [nosufdegrees] – nezpracovávat tituly za jménem
+\end{description}
+
+Nastavení jednotlivých jazyků se provádí pomocí těchto příkazů:
+
+  \begin{itemize}
+    \item\verb|\singlechars{jazyk}{písmena}| – seznam písmen, u kterých se potlačuje zalamování řádků.
+
+    \item\verb|\enablesplithyphens{jazyk}| –  nastaví podporu zalamování spojovníků pro daný jazyk.
+    \item\verb|\preventsinglelang{jazyk}| – nastaví pravidla pro daný jazyk pro celý dokument.
+  \end{itemize}
+
+Jazyk lze  vybrat pomocí balíčků \balicek{Babel} nebo \balicek{Polyglossia}. Následující příklad
+ukazuje, že v českém textu se vloží nezlomitelná mezera, po změně jazyka na angličtinu pomocí
+\verb|\selectlanguage{english}| se zpracování mezer vypne. 
+  
+
+
+\begin{verbatim}
+A příklad česky.
+\selectlanguage{english}
+A thing.
+\end{verbatim}
+
+\preventsingledebugon
+
+\noindent 
+A příklad česky.
+\selectlanguage{english}
+A thing.
+
+\preventsingledebugoff
+
+\selectlanguage{czech}
+
+
+\bigskip
+
+Zpracování celého dokumentu podle českých pravidel bez ohledu na aktuálně zvolený jazyk lze dosáhnout pomocí příkazu 
+\verb|\preventsinglelang{czech}|.
+
+\begin{verbatim}
+\preventsinglelang{czech}
+Příklad v češtině.
+\selectlanguage{english}
+A thing.
+\end{verbatim}
+
+\preventsingledebugon
+
+%\preventsinglelang{czech}
+\noindent Příklad v češtině.
+%\selectlanguage{english}
+A thing.
+
+\preventsingledebugoff
+%\selectlanguage{czech}
+
+\subsection{Balíček \balicek{Linebreaker}}
+
+\newcommand\testbox[1]{%
+  \parbox{120pt}{%
+    \parindent=15pt%
+    \tolerance=1%
+    \pretolerance=1%
+    #1
+  }%
+}
+
+
+\newcommand\printtest[1]{%
+  \linebreakerdisable%
+  \begin{subfigure}[b]{.45\textwidth}
+    \centering
+  \noindent\testbox{%
+    #1
+  }%
+  \caption{Bez balíčku \balicek{Linebreaker}}
+  \end{subfigure}
+  \linebreakerenable%
+  \hfill%
+  \begin{subfigure}[b]{.45\textwidth}
+    \centering
+  \testbox{%
+    #1
+  }%
+  \medskip
+  \caption{S balíčkem \balicek{Linebreaker}}
+  \end{subfigure}
+}
+
+Balíček \balicek{Linebreaker}~\cite{linebreaker} brání přetečení textu boxů a odstavců. 
+Příklad jeho použití můžete vidět na Obrázku~\ref{fig:linebreaker}, kde zamezí přetečení 
+několika řádků při sazbě do úzkého sloupce. 
+
+\balicek{Linebreaker} využívá callback Lua\TeX u \verb|linebreak_filter|, který řídí řádkový zlom.
+\balicek{Linebreaker} nahrazuje výchozí funkci pro řádkový zlom upravenou
+verzí, která detekuje přetečení nebo podtečení lámaného textu. Při detekci
+tohoto problému jej sází znovu s většími hodnotami \verb|\tolerance| a
+\verb|\emergencystretch|, dokud se přetečení nepotlačí nebo dokud se nedosáhne
+maximální hranice \verb|\tolerance|.
+
+Výhodou je, že tyto změny \verb|\tolerance| a \verb|\emergencystretch| jsou lokální pouze 
+pro aktuálně lámaný odstavec, zbytek textu nijak neovlivní. 
+
+  % \subsubsection{Nastavení}
+
+Balíček \balicek{Linebreaker} můžeme konfigurovat zadáním voleb balíčku
+\texttt{\textbackslash use}\discretionary{-}{}{}\texttt{package[<volby>]\{linebreaker\}} nebo později i v těle dokumentu s využitím příkazu
+\texttt{\textbackslash linebreakersetup\{<volby>\}}:
+\medskip
+
+  \begin{description}
+    \item[maxcycles] – počet pokusů o přesázení odstavce.
+    \item[maxemergencystretch] – maximální hodnota \verb|\emergencystretch|.
+    \item[maxtolerance] – maximální hodnota \verb|tolerance|.
+  \end{description}
+
+\medskip
+
+\begin{verbatim}
+\linebreakersetup{
+maxtolerance = 90,         % výchozí 8189
+maxemergencystretch = 1em, % výchozí 3em
+maxcycles = 4              % výchozí 30
+}
+\end{verbatim}
+
+\begin{figure}[b!]
+  \printtest{
+    The example document given below creates two pages by using Lua code alone. You
+will learn how to access TeX's boxes and counters from the Lua side, shipout a
+page into the PDF file, create horizontal and vertical boxes (hbox and vbox),
+create new nodes and manipulate the nodes links structure. 
+  }
+  \caption{Příklad využití balíčku \balicek{Linebreaker}}
+  \label{fig:linebreaker}
+\end{figure}
+
+\subsection{Balíček \balicek{lua-widow-control}}
+
+\selectlanguage{czech}
+Vdovy a sirotci (souhrně také parchanty) jsou typografickou chybou, která vzniká
+při zalomení stránek. Osamocený řádek odstavce se někdy ocitne na začátku nebo
+konci stránky. Sirotek je osamocený řádek na začátku stránky, vdova pak na
+konci. V \TeX u existují dvě penalty, \verb|\clubpenalty| a \verb|\widowpenalty|,
+které při nastavení vdovy a sirotky potlačují, ovšem za cenu rozšíření
+vertikálních mezer. Balíček
+\balicek{Lua-widow-control} \cite{lua-widow-control}
+používá jiný přístup. Každý odstavec sází dvakrát -- jednou s výchozími
+parametry, druhý o jeden řádek delší. To může mít vliv na rychlost kompilace
+dokumentu, v praxi by ale měl být malý. V~případě, že se při zalomení stránky
+detekuje parchant, vymění se předposlední odstavec na stránce za jeho verzi s delším řádkem, čímž
+dojde k posunutí problematického řádku.
+
+% =======================================================
+% Edit: Nejsem si jistý, odkud jsem získal tento obrázek. Pro jistotu ho
+% ve finální verzi článku nepoužiji.
+
+% Činnost balíčku v praxi můžete vidět na obrázku~\ref{fig:widow}. V tomto
+% případě byl detekován sirotek, označený v ukázce (a) červeně, proto se předešlý
+% odstavec nahradil za verzi, která je o jeden řádek delší, na ukázce (b)
+% označenou zeleně. 
+% 
+%   
+% 
+% 
+%   \begin{figure}[htbp]
+% \begin{subfigure}[t]{0.48\textwidth}
+%   \caption{Ukázka sirotka}
+%   \label{fig:widow}
+% % \begin{minipage}{5cm}
+%   \begin{center}
+%     \includegraphics[width=\textwidth,page=1]{examples/widow.pdf}
+%   \end{center}
+% % \end{minipage}
+% \end{subfigure}
+% \hfill
+% \begin{subfigure}[t]{0.48\textwidth}
+%   \caption{Potlačený sirotek}
+% % \begin{minipage}{5cm}
+%   \begin{center}
+%     \includegraphics[width=\textwidth,page=2]{examples/widow.pdf}
+%   \end{center}
+% % \end{minipage}
+% \end{subfigure}
+% \caption{Příklad potlačení sirotků}
+% \label{fig:sirotek}
+% \end{figure}
+% ========================================================
+
+
+% \subsubsection{Možnosti nastavení}
+
+Balíček \balicek{Lua-widow-control} lze nastavit pomocí několika voleb. Ty je možné zadat jako čárkou oddělené volby 
+v příkazu  \verb|\usepackage[<volby>]{lua-widow-control}|, nebo pomocí příkazu 
+\verb|\lwcsetup{<volby>}|.
+
+Následující volby umožňují změnit metodu použitou pro zamezení parchantů:
+
+ \begin{description}
+   \item[default] – nepřidává žádné vertikální mezery, používá pouze prodloužení odstavců. Tato metoda by měla odstranit 95 \% parchantů, může ovšem vést k příliš vzdušným odstavcům.
+   \item[strict] – přísnější nastavení, které dbá, aby změny zalomení odstavců byly co nejméně postřehnutelné.  Odstraní ovšem pouze třetinu parchantů.
+   \item[balanced] – nejdříve přidává vertikální mezery, pokud to nestačí, prodlouží odstavce. Tato metoda odstraní až 90 \% parchantů.
+  \end{description}
+
+Tento výčet je pouze malým úvodem k balíčku \balicek{Lua-widow-control}. Podrobný popis naleznete v článku Maxe Chernoffa~\cite{chernoff}, který vyšel v loňském Zpravodaji.
+
+
+
+\printbibliography
+
+\begin{summary}
+  This article focuses on the use of responsive design techniques to display
+  web pages on devices with different display sizes, such as mobile phones,
+  tablets, large monitors and printers. These methods allow optimizing the
+  readability of a document on all devices by using different font sizes,
+  individual page elements, and margins.
+
+  We present how similar functionality can be achieved using \LaTeX.
+  Specifically, it focuses on the use of Lua\LaTeX{} for automated typesetting,
+  using packages \balicek{Responsive} for setting font size and line spacing according to page size,
+  \balicek{Luavlna} to prevent the occurrence of
+  single-letter prepositions at line breaks, \balicek{Lua-widow-control} to
+  reduce orphan lines at page breaks and page starts, and \balicek{Linebreaker}
+  to prevent line overflow.
+
+  With these methods, a single source document can be used for different
+  outputs, such as print versions, e-book readers, and web pages, and achieve
+  optimal document display on all devices.
+
+\keywords: automatic typesetting, responsive design, Lua\LaTeX
+\end{summary}
+\end{document}
