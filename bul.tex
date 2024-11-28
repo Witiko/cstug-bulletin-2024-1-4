@@ -75,7 +75,18 @@
 % definovaná v csbulobalka.sty
 %
 
-\Obalka
+\Obalka[%
+  \centering
+  \begin{minipage}{64mm}%
+    \raisebox{0mm}{%
+      \includegraphics[
+        width=\linewidth,
+        trim={69cm 0 0 0},
+        clip,
+      ]{StaryNovotny-fantasia/images/montage}%
+    }%
+  \end{minipage}%
+]%
 
 \begingroup
 \hyphenpenalty=10000
