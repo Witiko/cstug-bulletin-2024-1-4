@@ -22,7 +22,7 @@ clear: $(DOCUMENT)
 	rm -f $(basename $@).bbl $(basename $@).pax
 	$(DOCKER) $(IMAGE) $(MAKE) -C .
 	# Convert image `camcorder-minterpolate-yadif.pdf` to grayscale for printing.
-	grep -F '\csbul@webtrue' $(basename $@).info || (cp -v images/camcorder-minterpolate-yadif.pdf images/camcorder-minterpolate-yadif.pdf.bak && ../pdf-to-grayscale.sh images/camcorder-vidstabdetect-vidstabtransform.pdf images/camcorder-minterpolate-yadif.pdf)
+	grep -F '\csbul@webtrue' $(basename $@).info || (cp -v images/camcorder-minterpolate-yadif.pdf images/camcorder-minterpolate-yadif.pdf.bak && ../pdf-to-grayscale.sh images/camcorder-minterpolate-yadif.pdf)
 	$(DOCKER) $(IMAGE) $(LATEXMK) $<
 	# Restore the original image `camcorder-minterpolate-yadif.pdf`.
 	grep -F '\csbul@webtrue' $(basename $@).info || (mv -v images/camcorder-minterpolate-yadif.pdf.bak images/camcorder-minterpolate-yadif.pdf)
