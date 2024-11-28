@@ -1,7 +1,7 @@
 .PHONY: all do-once-at-the-start preview clear FORCE
 
 DOCKER = docker run --rm -u $(shell id -u):$(shell id -g) --env TEXMFVAR=/var/tmp/texmf-var -v "$$PWD"/..:/workdir -w /workdir/"$$(basename "$$PWD")"
-IMAGE = texlive/texlive:TL2024-historic-with-cache
+IMAGE = texlive/texlive:TL2023-historic-with-cache
 LATEXMK = latexmk -lualatex -f
 DOCUMENT = responsive_latex_hoftich.tex
 
