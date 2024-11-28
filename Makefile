@@ -40,6 +40,7 @@ endef
 images: FORCE
 	$(DOCKER) build . -f Dockerfile.TL2020 -t texlive/texlive:TL2020-historic-with-cache
 	$(DOCKER) build . -f Dockerfile.TL2022 -t texlive/texlive:TL2022-historic-with-cache
+	$(DOCKER) build . -f Dockerfile.TL2022.StaryNovotny-fantasia -t texlive/texlive:TL2022-historic-with-cache-fantasia
 	$(DOCKER) build . -f Dockerfile.TL2023 -t texlive/texlive:TL2023-historic-with-cache
 	$(DOCKER) build . -f Dockerfile.TL2024 -t texlive/texlive:TL2024-historic-with-cache
 
@@ -77,8 +78,8 @@ bul-obalka-margins-%mm.pdf: bul.pdf bul-margins-%mm.pdf
 bul-blok-margins-%mm.pdf: bul-margins-%mm.pdf
 	$(PDFTK) $< cat 2-r2 output $@
 
-PAGETOTAL  = $$(( 6 + 11 ))
-COLORPAGES = $$(( 4 + 3  ))
+PAGETOTAL  = $$(( 6 + 11 + 21 ))
+COLORPAGES = $$(( 4 +  3 +  9 ))
 
 test:
 	# (( $$(pdfinfo bul.pdf     | grep 'Pages:' | awk '{print $$2}') == $(PAGETOTAL) + 4))
