@@ -1,0 +1,35 @@
+\let\origfaCheck=\faCheck
+\def\faCheck{\scriptsize \origfaCheck}
+\hbadness=10000
+
+\ExplSyntaxOn
+\cs_set:cpn {latex-Document} {\faCheck}
+\cs_set:cpn {latex_testing-Document} {\faCheck}
+\cs_set:cpn {l3build-l3build} {\faCheck}
+\cs_set:cpn {latex_testing-testing} {\faCheck}
+\cs_set:cpn {l3build-testing} {\faCheck}
+\begin{tabularx}{\linewidth}{@{}X*{5}{c}@{}}
+\toprule
+Název& Služby & Dokument & l3build & Testy & Docker \\
+\midrule
+%\clist_map_inline:nn {github-actions, gitlab-ci, forgejo-actions} {
+  \clist_map_inline:nn {latex, latex_testing, l3build} {
+%    \clist_map_inline:nn {_minimal, \reax} {
+      %iot based setups
+      \texttt{#1}
+      &\faGithub\kern 0.75em\relax\kern-1pt\relax\faGitlab\kern 0.75em\relax\faForgejo
+      &\cs_if_exist_use:c {#1-Document} & \use:c {#1-l3build} & \use:c {#1-testing} &
+      \faCheck
+      \\
+      %minimal setups
+      \texttt{#1_minimal}
+      &\faGithub\kern 0.75em\relax\kern-1pt\relax\faGitlab\kern 0.75em\relax\faForgejo
+      &\cs_if_exist_use:c {#1-Document} & \use:c {#1-l3build} & \use:c {#1-testing} &
+      \\
+%    }
+  }
+%}
+\\[-\dimeval{\ht\strutbox+\dp\strutbox}]
+\bottomrule
+\end{tabularx}
+\ExplSyntaxOff
