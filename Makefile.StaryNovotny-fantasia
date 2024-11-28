@@ -1,4 +1,4 @@
-.PHONY: all preview clear FORCE
+.PHONY: all do-once-at-the-start preview clear FORCE
 
 DOCKER = docker run --rm -u $(shell id -u):$(shell id -g) --env TEXMFVAR=/var/tmp/texmf-var -v "$$PWD"/..:/workdir -w /workdir/"$$(basename "$$PWD")"
 IMAGE = texlive/texlive:TL2022-historic-with-cache-fantasia
@@ -6,6 +6,12 @@ LATEXMK = latexmk -lualatex -shell-escape -f
 DOCUMENT = main.tex
 
 all: $(basename $(DOCUMENT)).pdf
+
+do-once-at-the-start: FORCE
+	mogrify -resize 2100x1500\> -quality 100% images/audacity.png images/flowblade.png images/screen3.png images/montage.jpg
+	mogrify -resize 468x288\> -quality 100% images/transition/transition-*.jpg
+	optipng -o 7 images/audacity.png images/flowblade.png images/screen3.png
+	jpegoptim -m85 images/transition/transition-*.jpg images/montage.jpg
 
 preview: $(DOCUMENT)
 	$(DOCKER) $(IMAGE) $(LATEXMK) -pvc $<
@@ -16,7 +22,10 @@ clear: $(DOCUMENT)
 %.pdf: %.tex FORCE
 	rm -f $(basename $@).bbl $(basename $@).pax
 	$(DOCKER) $(IMAGE) $(MAKE) -C .
-	grep -F '\csbul@webtrue' $(basename $@).info || ../pdf-to-grayscale.sh images/camcorder-vidstabdetect-vidstabtransform.pdf images/camcorder-minterpolate-yadif.pdf
+	# Convert images `camcorder-vidstabdetect-vidstabtransform.pdf` and `camcorder-minterpolate-yadif.pdf` to grayscale for printing.
+	grep -F '\csbul@webtrue' $(basename $@).info || (cp -v images/camcorder-vidstabdetect-vidstabtransform.pdf images/camcorder-vidstabdetect-vidstabtransform.pdf.bak && cp -v images/camcorder-minterpolate-yadif.pdf images/camcorder-minterpolate-yadif.pdf.bak	&& ../pdf-to-grayscale.sh images/camcorder-vidstabdetect-vidstabtransform.pdf images/camcorder-minterpolate-yadif.pdf)
 	$(DOCKER) $(IMAGE) $(LATEXMK) $<
+	# Restore the original images.
+	grep -F '\csbul@webtrue' $(basename $@).info || (mv -v images/camcorder-vidstabdetect-vidstabtransform.pdf.bak images/camcorder-vidstabdetect-vidstabtransform.pdf && mv -v images/camcorder-minterpolate-yadif.pdf.bak images/camcorder-minterpolate-yadif.pdf)
 	touch $(basename $@).info
 	! grep -F '\csbul@webtrue' $(basename $@).info || $(DOCKER) $(IMAGE) pdfannotextractor $@

@@ -1,8 +1,9 @@
 SHELL=/bin/bash -O extglob
 
-.PHONY: all test test-preprint test-xml FORCE
+.PHONY: all test test-preprint test-xml do-once-at-the-start FORCE
 
-all: bul.pdf bul-obalka.pdf bul-engtoc.pdf bul-toc.pdf bul-blok.pdf bul-web.pdf \
+all: do-once-at-the-start \
+	bul.pdf bul-obalka.pdf bul-engtoc.pdf bul-toc.pdf bul-blok.pdf bul-web.pdf \
 	bul-obalka-margins-5mm.pdf  bul-blok-margins-5mm.pdf \
 	bul-obalka-margins-6mm.pdf  bul-blok-margins-6mm.pdf \
 	bul-obalka-margins-7mm.pdf  bul-blok-margins-7mm.pdf \
@@ -27,13 +28,20 @@ math%.pfb:
 	$(DOCKER_RUN) texlive/texlive:TL2020-historic-with-cache t1disasm $(shell $(DOCKER_RUN) texlive/texlive:TL2020-historic-with-cache kpsewhich $@) | sed -e 's!%$$!!' > $@
 	$(DOCKER_RUN) texlive/texlive:TL2020-historic-with-cache t1asm -b $@ | sponge $@
 
+do-once-at-the-start: FORCE
+	$(PARALLEL) 'make -f ../{} -C {= s:^Makefile\.:: =}/ do-once-at-the-start' ::: Makefile.*
+
 define clear-and-typeset
-$(PARALLEL) 'make -f ../Makefile.{= s:\/:: =} -C {} clear all' ::: !(033-2024-1)/
+$(PDFLATEX_2020) $<
+endef
+
+define clear-and-typeset
+$(PARALLEL) 'make -f ../{} -C {= s:^Makefile\.:: =}/ clear all' ::: Makefile.*
 $(PDFLATEX_2020) $<
 endef
 
 define typeset
-$(PARALLEL) 'make -f ../Makefile.{= s:\/:: =} -C {} all' ::: !(033-2024-1)/
+$(PARALLEL) 'make -f ../{} -C {= s:^Makefile\.:: =}/ all' ::: Makefile.*
 $(PDFLATEX_2020) $<
 endef
 

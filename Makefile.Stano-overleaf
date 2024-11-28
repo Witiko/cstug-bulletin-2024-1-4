@@ -1,4 +1,4 @@
-.PHONY: all preview clear FORCE
+.PHONY: all do-once-at-the-start preview clear FORCE
 
 DOCKER = docker run --rm -u $(shell id -u):$(shell id -g) --env TEXMFVAR=/var/tmp/texmf-var -v "$$PWD"/..:/workdir -w /workdir/"$$(basename "$$PWD")"
 IMAGE = texlive/texlive:TL2024-historic-with-cache
@@ -6,6 +6,10 @@ LATEXMK = latexmk -pdf -f
 DOCUMENT = main.tex
 
 all: $(basename $(DOCUMENT)).pdf
+
+do-once-at-the-start: FORCE
+	mogrify -resize 1500x2100\> -quality 100% *.png
+	optipng -o 7 *.png
 
 preview: $(DOCUMENT)
 	$(DOCKER) $(IMAGE) $(LATEXMK) -pvc $<
