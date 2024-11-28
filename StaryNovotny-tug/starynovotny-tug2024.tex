@@ -43,9 +43,19 @@
                               A}%
                         \vss}%
         }}
+\def\strankasclankem#1#2{%
+  \begingroup
+  \def\csbul@start@page##1{%
+    ##1%
+    \endinput
+    \ignorespaces
+  }%
+  \makeatletter
+  \IfFileExists{../#1/#2.info}{\input ../#1/#2.info\relax}{\textbf{???}}%
+  \endgroup
+}
 \makeatother
 \def\AllTeX{(\La\kern-.075em)\kern-.075em\TeX}
-\def\strankasclankem#1#2{\textbf{??}}
 
 \begin{document}
 
@@ -79,7 +89,7 @@ Stejný den odpoledne ukázal Vítek Starý Novotný v přednášce nazvané \em
 
 Téhož dne večer ukázali Oliver Kopp, Marcel Krüger a Marei Peischl na workshopu nazvaném \emph{\foreignlanguage{english}{Creation of \LaTeX{} documents using a cloud-based pipeline}}~\cite{peischl2024pipeline}, jak je možné vytvářet \AllTeX ové dokumenty v cloudu. Překlad článku z workshopu začíná na straně \strankasclankem{Peischl-pipeline}{peischl-pipeline}.
 
-V sobotu ráno představil Michal Hoftich v přednášce nazvané \emph{\foreignlanguage{english}{Web page to \acro{PDF} conversion with Rmodepdf}}~\cite{hoftich2024weba, hoftich2024webc} způsob, jakým je možné v Lua\LaTeX u načítat a sázet webové stránky, vizte Obrázek~\ref{fig:michal}. Překlad článku z přednášky začíná na straně \strankasclankem{Hoftich-Responsive}{responsive_latex_hoftich}.
+V sobotu ráno představil Michal Hoftich v přednášce nazvané \emph{\foreignlanguage{english}{Web page to \acro{PDF} conversion with Rmodepdf}}~\cite{hoftich2024weba, hoftich2024webc} způsob, jakým je možné v Lua\LaTeX u načítat a sázet webové stránky, vizte Obrázek~\ref{fig:michal}. Překlad článku z přednášky začíná na straně \strankasclankem{Hoftich-responsive}{responsive_latex_hoftich}.
 
 \begin{figure}[p]
 \centering
