@@ -16,5 +16,7 @@ clear: $(DOCUMENT)
 %.pdf: %.tex FORCE
 	rm -f $(basename $@).bbl $(basename $@).pax
 	$(DOCKER) $(IMAGE) $(MAKE) -C .
+	grep -F '\csbul@webtrue' $(basename $@).info || ../pdf-to-grayscale.sh images/camcorder-vidstabdetect-vidstabtransform.pdf images/camcorder-minterpolate-yadif.pdf
+	$(DOCKER) $(IMAGE) $(LATEXMK) $<
 	touch $(basename $@).info
 	! grep -F '\csbul@webtrue' $(basename $@).info || $(DOCKER) $(IMAGE) pdfannotextractor $@
