@@ -49,5 +49,5 @@
       </para>
     </abstract>
   </additional-content>
-  <!-- <xi:include href="citations.Ruckert-profiling.xml"/> -->
+  <xi:include href="citations.Ruckert-profiling.xml"/>
 </article>

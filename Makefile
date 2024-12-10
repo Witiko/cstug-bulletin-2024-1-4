@@ -103,7 +103,7 @@ test:
 test-xml:
 	xmllint --xinclude --noout --relaxng bulletin.rng bulletin.xml
 	! grep '[\\~{}]' bulletin.xml article.*.xml citations.*.xml  # Ensure no TeX-like characters
-	# ! grep -- '--' bulletin.xml article.*.xml citations.*.xml
+	! grep -- '--' bulletin.xml article.*.xml citations.*.xml
 	! grep -F '<citation/>' article.*.xml citations.*.xml  # Ensure no empty citations
 
 test-preprint:
