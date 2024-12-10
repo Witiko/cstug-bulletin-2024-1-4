@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article doi="39" language="sk" publication_type="full_text"
+         xmlns:xi="http://www.w3.org/2001/XInclude">
+  <titles>
+    <title>Overleaf Community Edition: Postup inštalácie a rozdiely oproti Overleaf Professional</title>
+  </titles>
+  <contributors>
+    <person_name contributor_role="author" sequence="first">
+      <given_name>Michal</given_name>
+      <surname>Stano</surname>
+    </person_name>
+    <person_name contributor_role="author" sequence="additional">
+      <given_name>Vít</given_name>
+      <surname>Starý Novotný</surname>
+    </person_name>
+  </contributors>
+  <pages>
+    <first_page>39</first_page>
+    <last_page>43</last_page>
+  </pages>
+  <additional-content>
+    <abstract>
+      <para>
+        Webový editor Overleaf umožňuje pohodlné písanie dokumentov pomocou
+        <LaTeX/>u. Veľkou výhodou Overleafu je, že umožňuje spoluprácu viacerých
+        používateľov v reálnom čase. V tomto článku popíšeme postup inštalácie
+        bezplatnej verzie Overleaf Community Edition na vlastné zariadenie
+        a porovnáme ho s platenou verziou Overleaf Professional.
+      </para>
+    </abstract>
+    <title>Overleaf Community Edition: Installation and Comparison with Overleaf Professional</title>
+    <abstract>
+      <para>
+        The Overleaf web editor enables convenient writing of documents using
+        <LaTeX/>. A significant advantage of Overleaf is that it enables
+        collaboration among multiple users in real-time. In this article, we
+        describe the process of installing the free version of Overleaf
+        Community Edition on your own device and compare it with the paid
+        version of Overleaf Professional.
+      </para>
+    </abstract>
+  </additional-content>
+  <!-- <xi:include href="citations.Stano-overleaf.xml"/> -->
+</article>
