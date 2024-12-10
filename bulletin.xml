@@ -17,7 +17,7 @@
   <xi:include href="article.Hoftich-responsive.xml"/>
   <xi:include href="article.Stano-overleaf.xml"/>
   <xi:include href="article.Ruckert-profiling.xml"/>
-  <!-- <xi:include href="article.Peischl-pipeline.xml"/> -->
+  <xi:include href="article.Peischl-pipeline.xml"/>
   <links pdfurl="pdf/2024-1-4.pdf" pdfsize="9.7" unit="MiB">
     <prevlink url="bul2023-3-4.shtml">3-4/2023</prevlink>
   </links>

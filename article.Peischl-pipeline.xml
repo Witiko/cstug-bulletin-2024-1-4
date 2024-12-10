@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article doi="59" language="cs" publication_type="full_text"
+         xmlns:xi="http://www.w3.org/2001/XInclude">
+  <titles>
+    <title>Příprava (La)<TeX/>ových dokumentů v cloudu</title>
+  </titles>
+  <contributors>
+    <person_name contributor_role="author" sequence="first">
+      <given_name>Marei</given_name>
+      <surname>Peischl</surname>
+    </person_name>
+    <person_name contributor_role="author" sequence="additional">
+      <given_name>Marcel</given_name>
+      <surname>Krüger</surname>
+    </person_name>
+    <person_name contributor_role="author" sequence="additional">
+      <given_name>Oliver</given_name>
+      <surname>Kopp</surname>
+    </person_name>
+    <person_name contributor_role="translator" sequence="additional">
+      <given_name>Vít</given_name>
+      <surname>Starý Novotný</surname>
+    </person_name>
+  </contributors>
+  <pages>
+    <first_page>59</first_page>
+    <last_page>72</last_page>
+  </pages>
+  <additional-content>
+    <abstract>
+      <para>
+        Používání webových služeb pro kolaborativní přípravu dokumentů
+        v (La)<TeX/>u je dnes běžné, ale tyto nástroje se zaměřují na psaní
+        dokumentů, nikoliv na tvorbu šablon nebo balíčků. Používání serverů pro
+        průběžnou integraci a doručení je běžné ve vývoji softwaru, ale může
+        být snadno přizpůsobeno pro <TeX/> a přátele.
+      </para>
+      <para>
+        Tento článek ukazuje, jak začít s používáním automatizace na webových
+        službách jako GitHub, Forgejo nebo GitLab, a to jak pro autory
+        dokumentů, tak pro vývojáře (La)<TeX/> ových balíčků.
+      </para>
+    </abstract>
+    <title>Creation of <LaTeX/> documents using a cloud-based pipeline</title>
+    <abstract>
+      <para>
+        Using web-based platforms for collaborative editing of <LaTeX/>
+        documents is common these days. These tools focus on writing documents
+        and not on creation of templates or packages. Using build servers with
+        automated pipelines is common within software development but can
+        easily be adapted for <TeX/> &amp; friends.
+      </para>
+      <para>
+        This article will show how to get started using automated workflows on
+        platforms like GitHub, Forgejo, or GitLab for document authors as well
+        as <TeX/> developers.
+      </para>
+    </abstract>
+  </additional-content>
+  <!-- <xi:include href="citations.Peischl-pipeline.xml"/> -->
+</article>
