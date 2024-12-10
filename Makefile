@@ -15,6 +15,7 @@ PDFLATEX_2020 = $(DOCKER_RUN) texlive/texlive:TL2020-historic-with-cache pdflate
 PDFLATEX_2023 = $(DOCKER_RUN) texlive/texlive:TL2023-historic-with-cache pdflatex
 LATEXMK = $(DOCKER_RUN) texlive/texlive:TL2020-historic-with-cache latexmk
 PDFTK = $(DOCKER_RUN) mnuessler/pdftk
+EXTRACT_CITATIONS = $(DOCKER_RUN) texlive/texlive:TL2024-historic-with-cache make -f extract-citations/extract-citations.mk -C
 PARALLEL = parallel --joblog joblog --halt now,fail=1 --jobs 0 --
 
 FONTS = matha8.pfb matha9.pfb matha10.pfb mathb10.pfb
@@ -41,7 +42,7 @@ $(PDFLATEX_2020) $<
 endef
 
 define extract-citations
-$(PARALLEL) 'cd {= s:^Makefile\.:: =}/ && make -f ../extract-citations/extract-citations.mk all' ::: Makefile.*
+$(PARALLEL) '$(EXTRACT_CITATIONS) {= s:^Makefile\.:: =}' ::: Makefile.*
 endef
 
 images: FORCE
