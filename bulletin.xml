@@ -13,7 +13,7 @@
     </person_name>
   </editors>
   <xi:include href="StaryNovotny-tug/article.xml"/>
-  <!-- <xi:include href="StaryNovotny-fantasia/article.xml"/> -->
+  <xi:include href="StaryNovotny-fantasia/article.xml"/>
   <!-- <xi:include href="Hoftich-responsive/article.xml"/> -->
   <!-- <xi:include href="Stano-overleaf/article.xml"/> -->
   <!-- <xi:include href="Ruckert-profiling/article.xml"/> -->
