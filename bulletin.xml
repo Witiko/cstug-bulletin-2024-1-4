@@ -12,12 +12,12 @@
       <surname>Starý Novotný</surname>
     </person_name>
   </editors>
-  <xi:include href="StaryNovotny-tug/article.xml"/>
-  <xi:include href="StaryNovotny-fantasia/article.xml"/>
-  <!-- <xi:include href="Hoftich-responsive/article.xml"/> -->
-  <!-- <xi:include href="Stano-overleaf/article.xml"/> -->
-  <!-- <xi:include href="Ruckert-profiling/article.xml"/> -->
-  <!-- <xi:include href="Peischl-pipeline/article.xml"/> -->
+  <xi:include href="article.StaryNovotny-tug.xml"/>
+  <xi:include href="article.StaryNovotny-fantasia.xml"/>
+  <!-- <xi:include href="article.Hoftich-responsive.xml"/> -->
+  <!-- <xi:include href="article.Stano-overleaf.xml"/> -->
+  <!-- <xi:include href="article.Ruckert-profiling.xml"/> -->
+  <!-- <xi:include href="article.Peischl-pipeline.xml"/> -->
   <links pdfurl="pdf/2024-1-4.pdf" pdfsize="1234" unit="MiB">
     <prevlink url="bul2023-3-4.shtml">3-4/2023</prevlink>
   </links>
