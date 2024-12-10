@@ -40,6 +40,10 @@ $(PARALLEL) 'make -f ../{} -C {= s:^Makefile\.:: =}/ all' ::: Makefile.*
 $(PDFLATEX_2020) $<
 endef
 
+define extract-citations
+$(PARALLEL) 'cd {= s:^Makefile\.:: =}/ && make -f ../extract-citations/extract-citations.mk all' ::: Makefile.*
+endef
+
 images: FORCE
 	$(DOCKER) build . -f Dockerfile.TL2020 -t texlive/texlive:TL2020-historic-with-cache
 	$(DOCKER) build . -f Dockerfile.TL2022 -t texlive/texlive:TL2022-historic-with-cache
@@ -52,6 +56,7 @@ bul.pdf: bul.tex $(FONTS) FORCE
 	$(clear-and-typeset)
 	$(typeset)
 	$(typeset)
+	$(extract-citations)
 
 bul-web.pdf: bul-web.tex bul.tex $(FONTS) FORCE
 	$(LATEXMK) -c $<
