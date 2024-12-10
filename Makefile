@@ -58,6 +58,8 @@ bul-web.pdf: bul-web.tex bul.tex $(FONTS) FORCE
 	$(clear-and-typeset)
 	$(typeset)
 	$(typeset)
+	$(PDFTK) bul-web.pdf cat 1-13 14left 15right 16-17 18left 19-20 21right 22 23right 24left 25 26left 27-end output bul-web-rotated.pdf
+	mv bul-web-rotated.pdf bul-web.pdf
 
 bul-engtoc.pdf: bul.pdf
 	$(PDFTK) $< cat end output $@
