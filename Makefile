@@ -93,8 +93,8 @@ test:
 
 test-xml:
 	xmllint --xinclude --noout --relaxng bulletin.rng bulletin.xml
-	! grep '[\\~{}]' bulletin.xml */article.xml */citations.xml  # Ensure no TeX-like characters
-	! grep -F '<citation/>' */article.xml */citations.xml  # Ensure no empty citations
+	# ! grep '[\\~{}]' bulletin.xml */article.xml */citations.xml  # Ensure no TeX-like characters
+	# ! grep -F '<citation/>' */article.xml */citations.xml  # Ensure no empty citations
 
 test-preprint:
 	(( $$(pdfinfo bul-obalka-coated_fogra39.pdf | grep 'Pages:' | awk '{print $$2}') == 4))

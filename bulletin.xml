@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?oxygen RNGSchema="file:./bulletin.rng" type="xml"?>
-<bulletin year="2023" issue="3-4" doi-base="10.5300" reported="false" svnId="$Id$"
+<bulletin year="2024" issue="1-4" doi-base="10.5300" reported="false" svnId="$Id$"
           xmlns:xi="http://www.w3.org/2001/XInclude">
   <editors>
     <person_name contributor_role="editor" sequence="first">
@@ -12,15 +12,15 @@
       <surname>Starý Novotný</surname>
     </person_name>
   </editors>
-  <xi:include href="StaryNovotny-uvodnik/article.xml"/>
-  <xi:include href="StaryNovotny-tug/article.xml"/>
-  <xi:include href="Sustek-literate-rezani/literate-article.xml"/>
-  <xi:include href="Sustek-literate-rezani/rezani-article.xml"/>
-  <xi:include href="StaryNovotny-markdown/article.xml"/>
-  <xi:include href="Sojka-patterns/article.xml"/>
-  <xi:include href="Beeton-newbie/article.xml"/>
-  <xi:include href="StaryNovotny-l3seq/article.xml"/>
-  <links pdfurl="pdf/2023-3-4.pdf" pdfsize="6.4" unit="MiB">
-    <prevlink url="bul2023-1-2.shtml">1-2/2023</prevlink>
+  <!-- <xi:include href="StaryNovotny-uvodnik/article.xml"/> -->
+  <!-- <xi:include href="StaryNovotny-tug/article.xml"/> -->
+  <!-- <xi:include href="Sustek-literate-rezani/literate-article.xml"/> -->
+  <!-- <xi:include href="Sustek-literate-rezani/rezani-article.xml"/> -->
+  <!-- <xi:include href="StaryNovotny-markdown/article.xml"/> -->
+  <!-- <xi:include href="Sojka-patterns/article.xml"/> -->
+  <!-- <xi:include href="Beeton-newbie/article.xml"/> -->
+  <!-- <xi:include href="StaryNovotny-l3seq/article.xml"/> -->
+  <links pdfurl="pdf/2024-1-4.pdf" pdfsize="1234" unit="MiB">
+    <prevlink url="bul2023-3-4.shtml">3-4/2023</prevlink>
   </links>
 </bulletin>

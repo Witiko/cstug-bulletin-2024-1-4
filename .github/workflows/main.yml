@@ -19,8 +19,8 @@ jobs:
           set -e
           sudo apt update
           sudo apt install -y ghostscript libxml2-utils moreutils optipng parallel poppler-utils python3-pdfminer jpegoptim imagemagick
-#     - name: Validate metadata
-#       run: make test-xml
+      - name: Validate metadata
+        run: make test-xml
       - name: Build Docker images
         run: make images
       - name: Typeset CSTUG Bulletin
