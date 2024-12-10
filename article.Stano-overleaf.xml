@@ -40,5 +40,5 @@
       </para>
     </abstract>
   </additional-content>
-  <!-- <xi:include href="citations.Stano-overleaf.xml"/> -->
+  <xi:include href="citations.Stano-overleaf.xml"/>
 </article>
