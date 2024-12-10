@@ -14,7 +14,7 @@
   </editors>
   <xi:include href="article.StaryNovotny-tug.xml"/>
   <xi:include href="article.StaryNovotny-fantasia.xml"/>
-  <!-- <xi:include href="article.Hoftich-responsive.xml"/> -->
+  <xi:include href="article.Hoftich-responsive.xml"/>
   <!-- <xi:include href="article.Stano-overleaf.xml"/> -->
   <!-- <xi:include href="article.Ruckert-profiling.xml"/> -->
   <!-- <xi:include href="article.Peischl-pipeline.xml"/> -->

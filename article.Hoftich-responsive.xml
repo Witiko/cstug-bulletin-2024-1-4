@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article doi="28" language="cs" publication_type="full_text"
+         xmlns:xi="http://www.w3.org/2001/XInclude">
+  <titles>
+    <title>Responzivní design a automatická sazba s Lua<LaTeX/>em</title>
+  </titles>
+  <contributors>
+    <person_name contributor_role="author" sequence="first">
+      <given_name>Michal</given_name>
+      <surname>Hoftich</surname>
+    </person_name>
+  </contributors>
+  <pages>
+    <first_page>28</first_page>
+    <last_page>38</last_page>
+  </pages>
+  <additional-content>
+    <abstract>
+      <para>
+        Tento článek představuje využití metod responzivního designu
+        a pokročilých vlastností Lua<LaTeX/>u pro automatickou sazbu dokumentů
+        určených pro různé cílové výstupy, jak tištěné, tak elektronické,
+        například mobilní telefony, tablety nebo čtečky e-knih.
+      </para>
+      <para>
+        Konkrétně se zaměřuje na využití Lua<LaTeX/>u pro automatizovanou sazbu
+        s pomocí balíčků Responsive pro nastavení velikosti písma a řádkování
+        podle velikosti stránky, Luavlna pro zamezení výskytu jednopísmenných
+        předložek na koncích řádků, Lua-widow-control pro omezení osamocených
+        řádků na koncích a začátcích stránek a Linebreaker, který brání
+        přetečení řádků.
+      </para>
+    </abstract>
+    <title>Responsive Design and Automatic Typesetting with Lua<LaTeX/></title>
+    <abstract>
+      <para>
+        This article focuses on the use of responsive design techniques to
+        display web pages on devices with different display sizes, such as
+        mobile phones, tablets, large monitors and printers. These methods
+        allow optimizing the readability of a document on all devices by using
+        different font sizes, individual page elements, and margins.
+      </para>
+      <para>
+        We present how similar functionality can be achieved using <LaTeX/>.
+        Specifically, it focuses on the use of Lua<LaTeX/> for automated
+        typesetting, using packages Responsive for setting font size and line
+        spacing according to page size, Luavlna to prevent the occurrence of
+        single-letter prepositions at line breaks, Lua-widow-control to reduce
+        orphan lines at page breaks and page starts, and Linebreaker to prevent
+        line overflow.
+      </para>
+      <para>
+        With these methods, a single source document can be used for different
+        outputs, such as print versions, e-book readers, and web pages, and
+        achieve optimal document display on all devices.
+      </para>
+    </abstract>
+  </additional-content>
+  <!-- <xi:include href="citations.Hoftich-responsive.xml"/> -->
+</article>
