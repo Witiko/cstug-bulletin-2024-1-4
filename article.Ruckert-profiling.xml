@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article doi="44" language="cs" publication_type="full_text"
+         xmlns:xi="http://www.w3.org/2001/XInclude">
+  <titles>
+    <title>Profilování <TeX/>ových dokumentů</title>
+  </titles>
+  <contributors>
+    <person_name contributor_role="author" sequence="first">
+      <given_name>Martin</given_name>
+      <surname>Ruckert</surname>
+    </person_name>
+    <person_name contributor_role="translator" sequence="additional">
+      <given_name>Vít</given_name>
+      <surname>Starý Novotný</surname>
+    </person_name>
+  </contributors>
+  <pages>
+    <first_page>44</first_page>
+    <last_page>58</last_page>
+  </pages>
+  <additional-content>
+    <abstract>
+      <para>
+        Profiler je nástroj pro analýzu rychlosti kódu. Profiler může
+        poskytovat informace o rychlosti jednotlivých řádků kódu nebo i celých
+        procedur. Tyto informace jsou užitečné při optimalizaci kódu pro
+        dosažení maximální rychlosti.
+      </para>
+      <para>
+        Ačkoliv jsou profilery běžně dostupné, doposud neexistoval profiler pro
+        programátory, kteří připravují <TeX/>ová makra. V tomto článku
+        představuji texprof a texprofile: dva programy, které společně tvoří
+        profiler pro <TeX/>ové dokumenty.
+      </para>
+    </abstract>
+    <title>Profiling <TeX/> Input Files</title>
+    <abstract>
+      <para>
+        A profiler is a tool used by programmers to analyze the run time
+        behavior of the code they write. The profiler can map the CPU time of
+        a program to specific files and lines, or it can map the time to
+        individual procedures. This information is necessary if a programmer
+        wants to optimize the code for speed.
+      </para>
+      <para>
+        No such tool was so far available to programmers who write macro
+        packages for <TeX/>. This paper presents texprof and texprofile,
+        two programs working together as a profiler for <TeX/> input files.
+      </para>
+    </abstract>
+  </additional-content>
+  <!-- <xi:include href="citations.Ruckert-profiling.xml"/> -->
+</article>
