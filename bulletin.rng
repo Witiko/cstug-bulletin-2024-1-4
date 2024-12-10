@@ -726,9 +726,9 @@ for the internal web pages only allow loose content.
       <optional>
         <ref name="elem.editors"/>
       </optional>
-      <zeroOrMore>
+      <oneOrMore>
         <ref name="elem.article"/>
-      </zeroOrMore>
+      </oneOrMore>
       <zeroOrMore>
         <element name="p">
           <ref name="text"/>
