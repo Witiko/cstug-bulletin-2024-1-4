@@ -1,3 +1,6 @@
 [submodule "StaryNovotny-fantasia"]
 	path = StaryNovotny-fantasia
 	url = https://github.com/Witiko/fantasia-apocalyptica.git
+[submodule "extract-citations"]
+	path = extract-citations
+	url = https://github.com/Witiko/extract-citations.git

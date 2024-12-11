@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<citation_list xmlns:bltx="http://biblatex-biber.sourceforge.net/biblatexml">
+  <citation>
+    <contributors>
+      <person_name contributor_role="author" sequence="first">
+        <given_name>Donald</given_name>
+        <surname>Knuth</surname>
+      </person_name>
+    </contributors>
+    <article_title>Fantasia Apocalyptica</article_title>
+    <additionalcontent>
+      <url cited="2023-09-10">https://www-cs-faculty.stanford.edu/&#126;knuth/fant.html</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <contributors>
+      <person_name contributor_role="author" sequence="first">
+        <surname>
+          Fakulta
+          informatiky
+          Masarykovy
+          Univerzity
+        </surname>
+      </person_name>
+    </contributors>
+    <cYear>2020</cYear>
+    <article_title>Fantasia Apocalyptica: Česká premiéra</article_title>
+    <additionalcontent>
+      <url cited="2023-09-10">https://youtu.be/wk7dEKMPP68</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <doi>10.5300/2019-1-4/11</doi>
+  </citation>
+  <citation>
+    <doi>10.5300/2020-1-2/64</doi>
+  </citation>
+  <citation>
+    <article_title>Laboratoř elektronických multimediálních aplikací (LEMMA) – Filmový festival FI MU: Celouniverzitní spolek</article_title>
+    <additionalcontent>
+      <url cited="2024-04-08">https://www.muni.cz/studenti/studentske-spolky/lemma-filmovy-festival-fi-mu</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <contributors>
+      <person_name contributor_role="author" sequence="first">
+        <given_name>Pavel</given_name>
+        <surname>Šiler</surname>
+      </person_name>
+    </contributors>
+    <cYear>2019</cYear>
+    <article_title>Knuth Q&amp;A Session 1 (video, Sony PXW-X70)</article_title>
+    <additionalcontent>
+      <url cited="2024-04-08">ssh://anxur.fi.muni.cz/export/fi-graphics/2019-10-Turing-week/2019-10-08-video-Knuth-QA1-Sony-Siler/</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <contributors>
+      <person_name contributor_role="author" sequence="first">
+        <given_name>Pavel</given_name>
+        <surname>Šiler</surname>
+      </person_name>
+    </contributors>
+    <cYear>2019</cYear>
+    <article_title>Knuth Q&amp;A Session 2 (video, Sony PXW-X70)</article_title>
+    <additionalcontent>
+      <url cited="2024-04-08">ssh://anxur.fi.muni.cz/export/fi-graphics/2019-10-Turing-week/2019-10-09-video-Knuth-QA2-Sony-Siler/</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <contributors>
+      <person_name contributor_role="author" sequence="first">
+        <given_name>Pavel</given_name>
+        <surname>Šiler</surname>
+      </person_name>
+    </contributors>
+    <cYear>2019</cYear>
+    <article_title>Fantasia Apocalyptica (video, Sony PXW-X70)</article_title>
+    <additionalcontent>
+      <url cited="2024-04-08">ssh://anxur.fi.muni.cz/export/fi-graphics/2019-10-Turing-week/2019-10-11-video-Fantasia-apocalyptica-Sony-Siler/</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <article_title>FFmpeg: A complete, cross-platform solution to record, convert and stream audio and video</article_title>
+    <additionalcontent>
+      <url cited="2024-04-11">https://ffmpeg.org/</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <contributors>
+      <person_name contributor_role="author" sequence="first">
+        <surname>nagadomi</surname>
+      </person_name>
+    </contributors>
+    <article_title>waifu2x: Image Super-Resolution for Anime-Style Art</article_title>
+    <additionalcontent>
+      <url cited="2019-11-21">https://github.com/nagadomi/waifu2x</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <article_title>FFmpeg Filters Documentation: vidstabdetect</article_title>
+    <additionalcontent>
+      <url cited="2024-04-08">https://ffmpeg.org/ffmpeg-filters.html#vidstabdetect</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <cYear>2024</cYear>
+    <article_title>FFmpeg Filters Documentation: vidstabtransform</article_title>
+    <additionalcontent>
+      <url cited="2024-04-08">https://ffmpeg.org/ffmpeg-filters.html#vidstabtransform</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <article_title>FFmpeg Filters Documentation: minterpolate</article_title>
+    <additionalcontent>
+      <url cited="2024-04-08">https://ffmpeg.org/ffmpeg-filters.html#minterpolate</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <article_title>FFmpeg Filters Documentation: yadif</article_title>
+    <additionalcontent>
+      <url cited="2024-04-08">https://ffmpeg.org/ffmpeg-filters.html#yadif-1</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <contributors>
+      <person_name contributor_role="author" sequence="first">
+        <given_name>Petr</given_name>
+        <surname>Sojka</surname>
+      </person_name>
+    </contributors>
+    <cYear>2019</cYear>
+    <article_title>Fantasia Apocalyptica (zvuk, Zoom H1)</article_title>
+    <additionalcontent>
+      <url cited="2024-04-08">ssh://anxur.fi.muni.cz/export/fi-graphics/2019-10-Turing-week/2019-10-11-audio-Fantasia-apocalyptica-ZoomH1-TS/</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <contributors>
+      <person_name contributor_role="author" sequence="first">
+        <given_name>Petr</given_name>
+        <surname>Holubář</surname>
+      </person_name>
+    </contributors>
+    <cYear>2019</cYear>
+    <article_title>Fantasia Apocalyptica (zvuk, mix)</article_title>
+    <additionalcontent>
+      <url cited="2024-04-08">ssh://anxur.fi.muni.cz/export/fi-graphics/2019-10-Turing-week/2019-10-11-audio-Fantasia-apocalyptica-Mix-Tudio/</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <contributors>
+      <person_name contributor_role="author" sequence="first">
+        <given_name>Petr</given_name>
+        <surname>Sojka</surname>
+      </person_name>
+    </contributors>
+    <cYear>2019</cYear>
+    <article_title>Fantasia Apocalyptica (zvuk, Roland R26)</article_title>
+    <additionalcontent>
+      <url cited="2024-04-08">ssh://anxur.fi.muni.cz/export/fi-graphics/2019-10-Turing-week/2019-10-11-audio-Fantasia-apocalyptica-RolandR26zLemma-organ/</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <contributors>
+      <person_name contributor_role="author" sequence="first">
+        <given_name>Pavel</given_name>
+        <surname>Šiler</surname>
+      </person_name>
+    </contributors>
+    <cYear>2019</cYear>
+    <article_title>Fantasia Apocalyptica (zvuk, Sony PXW-X70)</article_title>
+    <additionalcontent>
+      <url cited="2024-04-08">ssh://anxur.fi.muni.cz/export/fi-graphics/2019-10-Turing-week/2019-10-11-audio-Fantasia-apocalyptica-Sony-Siler/</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <article_title>SSL G-Master Buss Compressor: “Glue” tracks into a smooth, cohesive mix</article_title>
+    <additionalcontent>
+      <url cited="2024-04-29">https://www.waves.com/plugins/ssl-g-master-buss-compressor</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <contributors>
+      <person_name contributor_role="author" sequence="first">
+        <given_name>Vít</given_name>
+        <surname>
+          Starý
+          Novotný
+        </surname>
+      </person_name>
+    </contributors>
+    <cYear>2019</cYear>
+    <article_title>Fantasia Apocalyptica (zvuk, mix)</article_title>
+    <additionalcontent>
+      <url cited="2024-04-08">ssh://anxur.fi.muni.cz/export/fi-graphics/2019-10-Turing-week/2019-11-19-audio-Fantasia-apocalyptica-Mix-Novotny/</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <contributors>
+      <person_name contributor_role="author" sequence="first">
+        <given_name>Vít</given_name>
+        <surname>
+          Starý
+          Novotný
+        </surname>
+      </person_name>
+    </contributors>
+    <cYear>2019</cYear>
+    <article_title>Fantasia Apocalyptica (zvuk, mix)</article_title>
+    <additionalcontent>
+      <url cited="2024-04-08">ssh://anxur.fi.muni.cz/export/fi-graphics/2019-10-Turing-week/2019-12-09-audio-Fantasia-apocalyptica-Mix-Novotny/</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <contributors>
+      <person_name contributor_role="author" sequence="first">
+        <surname>edsward</surname>
+      </person_name>
+    </contributors>
+    <cYear>2016</cYear>
+    <article_title>ChurchBellKonstanz.wav: Church bells of the Minster in Constance, Germany</article_title>
+    <additionalcontent>
+      <url cited="2024-03-15">https://freesound.org/people/edsward/sounds/341866/</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <contributors>
+      <person_name contributor_role="author" sequence="first">
+        <given_name>Šimon</given_name>
+        <surname>Mačejovský</surname>
+      </person_name>
+    </contributors>
+    <cYear>2019</cYear>
+    <article_title>Úvodní slovo a závěr (video)</article_title>
+    <additionalcontent>
+      <url cited="2024-05-02">ssh://anxur.fi.muni.cz/export/fi-graphics/2019-10-Turing-week/2019-12-24-video-strih-4k-Macejovsky/</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <contributors>
+      <person_name contributor_role="author" sequence="first">
+        <given_name>Martina</given_name>
+        <surname>Morávková</surname>
+      </person_name>
+    </contributors>
+    <cYear>2019</cYear>
+    <article_title>Knuth Q&amp;A Session 1 (fotografie)</article_title>
+    <additionalcontent>
+      <url cited="2024-05-02">ssh://anxur.fi.muni.cz/export/fi-graphics/2019-10-08-foto-dek1-Mora%CC%81vkova%CC%81/</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <article_title>FFmpeg Filters Documentation: ass</article_title>
+    <additionalcontent>
+      <url cited="2024-05-02">https://ffmpeg.org/ffmpeg-filters.html#ass</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <article_title>libass</article_title>
+    <additionalcontent>
+      <url cited="2024-05-02">https://github.com/libass/libass</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <contributors>
+      <person_name contributor_role="author" sequence="first">
+        <given_name>Vít</given_name>
+        <surname>
+          Starý
+          Novotný
+        </surname>
+      </person_name>
+    </contributors>
+    <cYear>2020</cYear>
+    <article_title>Enable font kerning by default</article_title>
+    <additionalcontent>
+      <url cited="2024-05-02">https://github.com/Aegisub/Aegisub/issues/164</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <contributors>
+      <person_name contributor_role="author" sequence="first">
+        <given_name>Vít</given_name>
+        <surname>
+          Starý
+          Novotný
+        </surname>
+      </person_name>
+    </contributors>
+    <cYear>2019</cYear>
+    <article_title>Úvodní slovo a závěr (titulky)</article_title>
+    <additionalcontent>
+      <url cited="2024-05-02">ssh://anxur.fi.muni.cz/export/fi-graphics/2019-10-Turing-week/2019-12-12-titulky-Novotny/</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <article_title>Aegisub: Advanced Subtitle Editor</article_title>
+    <additionalcontent>
+      <url cited="2024-05-02">https://aegisub.org/</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <doi>10.1109/TPAMI.2015.2439281</doi>
+  </citation>
+  <citation>
+    <article_title>FFmpeg: H.265/HEVC Video Encoding Guide</article_title>
+    <additionalcontent>
+      <url cited="2024-10-03">https://trac.ffmpeg.org/wiki/Encode/H.265</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <article_title>FFmpeg: AAC Audio Encoding Guide</article_title>
+    <additionalcontent>
+      <url cited="2024-10-31">https://trac.ffmpeg.org/wiki/Encode/AAC</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <contributors>
+      <person_name contributor_role="author" sequence="first">
+        <given_name>Donald</given_name>
+        <surname>Knuth</surname>
+      </person_name>
+      <person_name contributor_role="author" sequence="additional">
+        <given_name>Duane</given_name>
+        <surname>Bibby</surname>
+      </person_name>
+    </contributors>
+    <cYear>2018</cYear>
+    <isbn media_type="print">978-1-68400-044-9</isbn>
+    <article_title>Fantasia Apocalyptica Illustrated</article_title>
+  </citation>
+  <citation>
+    <contributors>
+      <person_name contributor_role="author" sequence="first">
+        <given_name>Isaac</given_name>
+        <surname>Morland</surname>
+      </person_name>
+    </contributors>
+    <cYear>2018</cYear>
+    <article_title>Fantasia Apocalyptica</article_title>
+    <additionalcontent>
+      <url cited="2024-08-05">https://www-cs-faculty.stanford.edu/&#126;knuth/fant-screen2-texts.pdf</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <article_title>PDFtk: The PDF Toolkit</article_title>
+    <additionalcontent>
+      <url cited="2024-08-26">https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <article_title>ImageMagick: Mastering Digital Image Alchemy</article_title>
+    <additionalcontent>
+      <url cited="2024-10-03">https://imagemagick.org/</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <contributors>
+      <person_name contributor_role="author" sequence="first">
+        <given_name>
+          Duane
+          R.
+        </given_name>
+        <surname>Bibby</surname>
+      </person_name>
+      <person_name contributor_role="author" sequence="additional">
+        <given_name>
+          Donald
+          E.
+        </given_name>
+        <surname>Knuth</surname>
+      </person_name>
+    </contributors>
+    <cYear>2018</cYear>
+    <isbn media_type="print">978-1-68400-044-9</isbn>
+    <article_title>Fantasia Apocalyptica Illustrated</article_title>
+    <additionalcontent>
+      <url>https://www-cs-faculty.stanford.edu/&#126;knuth/fant-screen1-art.pdf</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <article_title>Flowblade: Free &amp; Libre Video Editor</article_title>
+    <additionalcontent>
+      <url cited="2024-10-03">https://jliljebl.github.io/flowblade/</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <article_title>MLT Multimedia Framework</article_title>
+    <additionalcontent>
+      <url cited="2024-10-03">https://www.mltframework.org/</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <article_title>FFmpeg: Concatenating media files</article_title>
+    <additionalcontent>
+      <url cited="2024-10-03">https://trac.ffmpeg.org/wiki/Concatenate</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <contributors>
+      <person_name contributor_role="author" sequence="first">
+        <given_name>Tomáš</given_name>
+        <surname>Szaniszlo</surname>
+      </person_name>
+    </contributors>
+    <cYear>2019</cYear>
+    <article_title>Knuth: Fantasia Apocalyptica D3 call</article_title>
+    <additionalcontent>
+      <url cited="2024-10-23">https://gitlab.fi.muni.cz/unix/beeplay/-/commit/68c59a75</url>
+    </additionalcontent>
+  </citation>
+</citation_list>
