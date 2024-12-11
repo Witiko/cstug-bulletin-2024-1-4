@@ -8,6 +8,7 @@ DOCUMENT = main.tex
 all: $(basename $(DOCUMENT)).pdf
 
 do-once-at-the-start: FORCE
+	cp ../fantasia-effects-406.png images/screen2-czech/
 	mogrify -resize 2100x1500\> -quality 100% images/audacity.png images/flowblade.png images/screen3.png images/montage.jpg
 	optipng -o 7 images/audacity.png images/flowblade.png images/screen3.png
 	jpegoptim -m85 images/montage.jpg
@@ -20,7 +21,11 @@ clear: $(DOCUMENT)
 
 %.pdf: %.tex FORCE
 	rm -f $(basename $@).bbl $(basename $@).pax
-	$(DOCKER) $(IMAGE) $(MAKE) -C .
+	$(DOCKER) $(IMAGE) $(MAKE) -C images/
+	$(DOCKER) $(IMAGE) $(MAKE) -C images/frames/
+	$(DOCKER) $(IMAGE) $(MAKE) -C images/screen2-czech/ fantasia.pdf fantasia-background.pdf fantasia-text.pdf
+	$(DOCKER) $(IMAGE) $(MAKE) -C images/transition/
+	$(DOCKER) $(IMAGE) $(LATEXMK) $<
 	# Convert image `camcorder-minterpolate-yadif.pdf` to grayscale for printing.
 	grep -F '\csbul@webtrue' $(basename $@).info || (cp -v images/camcorder-minterpolate-yadif.pdf images/camcorder-minterpolate-yadif.pdf.bak && ../pdf-to-grayscale.sh images/camcorder-minterpolate-yadif.pdf)
 	$(DOCKER) $(IMAGE) $(LATEXMK) $<
