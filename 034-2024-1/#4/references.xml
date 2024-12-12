@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<references>
+  <reference id="1">
+    <prefix>[1]</prefix>
+    <title>Overleaf, Collaborative Online LaTeX Editor</title>
+    <authors>
+      <author>Novotný, Vít</author>
+    </authors>
+    <ISSN>1211-6661</ISSN>
+    <URL>https://dx.doi.org/10.5300/2021-1-4/3</URL>
+    <number>1</number>
+    <pages>3-8</pages>
+    <publisher>Czech and Slovak TeX Users Group</publisher>
+    <year>2021</year>
+    <suffix>Dostupné z DOI: 10.5300/2021-1-4/3.</suffix>
+  </reference>
+  <reference id="2">
+    <prefix>[2]</prefix>
+    <title>TeX – LaTeX Stack Exchange</title>
+    <authors/>
+    <URL>https://tex.stackexchange.com/</URL>
+    <suffix>[online]. [cit. 2024-04-08]. Dostupné z: https://tex.stackexchange.com/.</suffix>
+  </reference>
+  <reference id="3">
+    <prefix>[3]</prefix>
+    <title>Overleaf github page</title>
+    <authors>
+      <author>Overleaf team</author>
+    </authors>
+    <URL>https://github.com/overleaf/overleaf</URL>
+    <suffix>[online]. [cit. 2024-02-26]. Dostupné z: https://github.com/overleaf/overleaf.</suffix>
+  </reference>
+  <reference id="4">
+    <prefix>[4]</prefix>
+    <title>TeX Live</title>
+    <authors/>
+    <URL>http://tug.org/texlive/</URL>
+    <suffix>[online]. [cit. 2024-02-26]. Dostupné z: http://tug.org/texlive/.</suffix>
+  </reference>
+</references>

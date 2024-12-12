@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<references>
+  <reference id="1">
+    <prefix>[1]</prefix>
+    <title>Creation of LaTeX documents using a cloud-based pipeline</title>
+    <authors>
+      <author>Peischl, Marei</author>
+      <author>Krüger, Marcel</author>
+      <author>Kopp, Oliver</author>
+    </authors>
+    <booktitle>TUGboat</booktitle>
+    <number>2</number>
+    <volume>45</volume>
+    <year>2024</year>
+    <suffix/>
+  </reference>
+  <reference id="2">
+    <prefix>[2]</prefix>
+    <title>Overleaf, Collaborative Online LaTeX Editor</title>
+    <authors>
+      <author>Novotný, Vít</author>
+    </authors>
+    <ISSN>1211-6661</ISSN>
+    <URL>https://dx.doi.org/10.5300/2021-1-4/3</URL>
+    <number>1</number>
+    <pages>3-8</pages>
+    <publisher>Czech and Slovak TeX Users Group</publisher>
+    <year>2021</year>
+    <suffix>Dostupné z DOI: 10.5300/2021-1-4/3.</suffix>
+  </reference>
+  <reference id="3">
+    <prefix>[3]</prefix>
+    <title>Overleaf Community Edition: Postup inštalácie a rozdiely oproti Overleaf Professional</title>
+    <authors>
+      <author>Stano, Michal</author>
+      <author>Starý Novotný, Vít</author>
+    </authors>
+    <URL>http://www.overleaf.com/read/hmxhshbgnbzm</URL>
+    <suffix>[online]. [B.r.] [cit. 2024-09-03]. Dostupné z: http://www.overleaf.com/read/hmxhshbgnbzm.</suffix>
+  </reference>
+  <reference id="4">
+    <prefix>[4]</prefix>
+    <title>The LaTeX Project</title>
+    <authors/>
+    <URL>https://github.com/latex3/</URL>
+    <suffix>[online]. [cit. 2024-08-29]. Dostupné z: https://github.com/latex3/.</suffix>
+  </reference>
+  <reference id="5">
+    <prefix>[5]</prefix>
+    <title>l3build: A testing and building system for (La)TeX</title>
+    <authors>
+      <author>The LaTeX Project</author>
+    </authors>
+    <URL>https://ctan.org/pkg/l3build</URL>
+    <suffix>[online]. [cit. 2024-08-29]. Dostupné z: https://ctan.org/pkg/l3build.</suffix>
+  </reference>
+  <reference id="6">
+    <prefix>[6]</prefix>
+    <title>&lt;tt&gt;l3build&lt;/tt&gt;: The beginner's guide</title>
+    <authors>
+      <author>Wright, Joseph</author>
+    </authors>
+    <ISSN>0896-3207</ISSN>
+    <URL>https://dx.doi.org/10.47397/tb/43-1/tb133wright-l3build</URL>
+    <number>1</number>
+    <pages>40-43</pages>
+    <publisher>TeX Users Group</publisher>
+    <volume>43</volume>
+    <year>2022</year>
+    <suffix>Dostupné z DOI: 10.47397/tb/43-1/tb133wright-l3build.</suffix>
+  </reference>
+  <reference id="7">
+    <prefix>[7]</prefix>
+    <title>TeXhackse/tugboat-tug2024-cicd</title>
+    <authors>
+      <author>Peischl, Marei</author>
+      <author>Krüger, Marcel</author>
+      <author>Kopp, Oliver</author>
+    </authors>
+    <URL>https://tug.org/l/peischl-cicd2024</URL>
+    <suffix>[online]. [cit. 2024-08-30]. Dostupné z: https://tug.org/l/peischl-cicd2024.</suffix>
+  </reference>
+  <reference id="8">
+    <prefix>[8]</prefix>
+    <title>xu-cheng/latex-action: GitHub Action to compile LaTeX documents</title>
+    <authors>
+      <author>Xu, Cheng</author>
+    </authors>
+    <URL>https://github.com/xu-cheng/latex-action/</URL>
+    <suffix>[online]. [cit. 2024-09-03]. Dostupné z: https://github.com/xu-cheng/latex-action/.</suffix>
+  </reference>
+  <reference id="9">
+    <prefix>[9]</prefix>
+    <title>Workflow syntax for GitHub Actions</title>
+    <authors/>
+    <URL>https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions</URL>
+    <suffix>[online]. [cit. 2024-09-03]. Dostupné z: https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions.</suffix>
+  </reference>
+  <reference id="10">
+    <prefix>[10]</prefix>
+    <title>Choosing GitHub-hosted runners</title>
+    <authors/>
+    <URL>https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#choosing-github-hosted-runners</URL>
+    <suffix>[online]. [cit. 2024-09-03]. Dostupné z: https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#choosing-github-hosted-runners.</suffix>
+  </reference>
+  <reference id="11">
+    <prefix>[11]</prefix>
+    <title>GitHub Workflow template for LaTeX packages</title>
+    <authors/>
+    <URL>https://github.com/islandoftex/tug2024-workflow-github</URL>
+    <suffix>[online]. [cit. 2024-09-03]. Dostupné z: https://github.com/islandoftex/tug2024-workflow-github.</suffix>
+  </reference>
+  <reference id="12">
+    <prefix>[12]</prefix>
+    <title>Providing Docker images for TeX Live and ConTeXt</title>
+    <authors>
+      <author>Island of TeX</author>
+    </authors>
+    <ISSN>0896-3207</ISSN>
+    <URL>https://tug.org/TUGboat/tb40-3/tb126island-docker.pdf</URL>
+    <booktitle>TUGboat</booktitle>
+    <number>3</number>
+    <volume>40</volume>
+    <year>2019</year>
+    <suffix>Dostupné také z: https://tug.org/TUGboat/tb40-3/tb126island-docker.pdf.</suffix>
+  </reference>
+  <reference id="13">
+    <prefix>[13]</prefix>
+    <title>Living in containers—on TeX Live (and ConTeXt) in a Docker setting</title>
+    <authors>
+      <author>Island of TeX</author>
+    </authors>
+    <ISSN>0896-3207</ISSN>
+    <URL>https://dx.doi.org/10.47397/tb/44-2/tb137island-docker</URL>
+    <number>2</number>
+    <pages>249-252</pages>
+    <publisher>TeX Users Group</publisher>
+    <volume>44</volume>
+    <year>2023</year>
+    <suffix>Dostupné z DOI: 10.47397/tb/44-2/tb137island-docker.</suffix>
+  </reference>
+  <reference id="14">
+    <prefix>[14]</prefix>
+    <title>Checkout action</title>
+    <authors/>
+    <URL>https://github.com/actions/checkout/</URL>
+    <suffix>[online]. [cit. 2024-09-03]. Dostupné z: https://github.com/actions/checkout/.</suffix>
+  </reference>
+  <reference id="15">
+    <prefix>[15]</prefix>
+    <title>latexmk: Fully automated LaTeX document generation</title>
+    <authors>
+      <author>Collins, John</author>
+    </authors>
+    <URL>https://ctan.org/pkg/latexmk</URL>
+    <suffix>[online]. [cit. 2024-09-03]. Dostupné z: https://ctan.org/pkg/latexmk.</suffix>
+  </reference>
+  <reference id="16">
+    <prefix>[16]</prefix>
+    <title>Forgejo Repository</title>
+    <authors>
+      <author>Forgejo</author>
+    </authors>
+    <URL>https://codeberg.org/forgejo/forgejo</URL>
+    <suffix>[online]. [cit. 2024-07-27]. Dostupné z: https://codeberg.org/forgejo/forgejo.</suffix>
+  </reference>
+  <reference id="17">
+    <prefix>[17]</prefix>
+    <title>Using Forgejo Actions (Self-hosted)</title>
+    <authors/>
+    <URL>https://docs.codeberg.org/ci/actions/</URL>
+    <suffix>[online]. [cit. 2024-09-10]. Dostupné z: https://docs.codeberg.org/ci/actions/.</suffix>
+  </reference>
+  <reference id="18">
+    <prefix>[18]</prefix>
+    <title>GitLab Workflow template for LaTeX documents</title>
+    <authors/>
+    <URL>https://gitlab.com/islandoftex/texmf/tug2024-workflow-document-gitlab</URL>
+    <suffix>[online]. [cit. 2024-09-10]. Dostupné z: https://gitlab.com/islandoftex/texmf/tug2024-workflow-document-gitlab.</suffix>
+  </reference>
+  <reference id="19">
+    <prefix>[19]</prefix>
+    <title>TeX Live Docker image</title>
+    <authors/>
+    <URL>https://gitlab.com/islandoftex/images/texlive</URL>
+    <suffix>[online]. [cit. 2024-07-20]. Dostupné z: https://gitlab.com/islandoftex/images/texlive.</suffix>
+  </reference>
+  <reference id="20">
+    <prefix>[20]</prefix>
+    <title>DEPP: Dependency Printer for TeX Live</title>
+    <authors/>
+    <URL>https://gitlab.com/islandoftex/texmf/depp</URL>
+    <suffix>[online]. [cit. 2024-09-15]. Dostupné z: https://gitlab.com/islandoftex/texmf/depp.</suffix>
+  </reference>
+  <reference id="21">
+    <prefix>[21]</prefix>
+    <title>File tl_packages</title>
+    <authors>
+      <author>Kopp, Oliver</author>
+    </authors>
+    <URL>https://github.com/islandoftex/tug2024-workflow-document-github/blob/main/.github/tl_packages</URL>
+    <suffix>[online]. [cit. 2024-09-15]. Dostupné z: https://github.com/islandoftex/tug2024-workflow-document-github/blob/main/.github/tl_packages.</suffix>
+  </reference>
+  <reference id="22">
+    <prefix>[22]</prefix>
+    <title>teatimeguest/setup-texlive-action: A GitHub Action to set up TeX Live</title>
+    <authors>
+      <author>Krüger, Marcel</author>
+    </authors>
+    <URL>https://github.com/zauguin/install-texlive</URL>
+    <suffix>[online]. [cit. 2024-09-15]. Dostupné z: https://github.com/zauguin/install-texlive.</suffix>
+  </reference>
+  <reference id="23">
+    <prefix>[23]</prefix>
+    <title>teatimeguest/setup-texlive-action repository</title>
+    <authors/>
+    <URL>https://github.com/teatimeguest/setup-texlive-action</URL>
+    <suffix>[online]. [cit. 2024-09-15]. Dostupné z: https://github.com/teatimeguest/setup-texlive-action.</suffix>
+  </reference>
+  <reference id="24">
+    <prefix>[24]</prefix>
+    <title>File minimal-portable-tl-setup.sh</title>
+    <authors>
+      <author>Peischl, Marei</author>
+    </authors>
+    <URL>https://gitlab.com/islandoftex/texmf/depp/-/blob/main/setup-examples/texlive-minimal-portable/minimal-portable-tl-setup.sh</URL>
+    <suffix>[online]. [cit. 2024-09-16]. Dostupné z: https://gitlab.com/islandoftex/texmf/depp/-/blob/main/setup-examples/texlive-minimal-portable/minimal-portable-tl-setup.sh.</suffix>
+  </reference>
+  <reference id="25">
+    <prefix>[25]</prefix>
+    <title>zauguin/l3build-failure-artifacts</title>
+    <authors>
+      <author>Krüger, Marcel</author>
+    </authors>
+    <URL>https://github.com/zauguin/l3build-failure-artifacts</URL>
+    <suffix>[online]. [cit. 2024-09-16]. Dostupné z: https://github.com/zauguin/l3build-failure-artifacts.</suffix>
+  </reference>
+  <reference id="26">
+    <prefix>[26]</prefix>
+    <title>nektos/act: Run your GitHub Actions locally</title>
+    <authors/>
+    <URL>https://github.com/nektos/act</URL>
+    <suffix>[online]. [cit. 2024-09-16]. Dostupné z: https://github.com/nektos/act.</suffix>
+  </reference>
+  <reference id="27">
+    <prefix>[27]</prefix>
+    <title>Pretesting TeX Live 2024</title>
+    <authors/>
+    <URL>https://www.tug.org/texlive/pretest.html</URL>
+    <suffix>[online]. [cit. 2024-09-16]. Dostupné z: https://www.tug.org/texlive/pretest.html.</suffix>
+  </reference>
+</references>

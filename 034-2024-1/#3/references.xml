@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<references>
+  <reference id="1">
+    <prefix>[1]</prefix>
+    <title>The Responsive package</title>
+    <authors>
+      <author>Hoftich, Michal</author>
+    </authors>
+    <URL>https://www.ctan.org/pkg/responsive</URL>
+    <year>2023</year>
+    <suffix>[online]. 2023. Ver. 0.1 [cit. 2023-03-30]. Dostupné z: https://www.ctan.org/pkg/responsive.</suffix>
+  </reference>
+  <reference id="2">
+    <prefix>[2]</prefix>
+    <title>The Luavlna package: Prevent line breaks after single letter words, units, or academic titles</title>
+    <authors>
+      <author>Hoftich, Michal</author>
+    </authors>
+    <URL>https://ctan.org/pkg/luavlna</URL>
+    <year>2023</year>
+    <suffix>[online]. 2023. 0.1k [cit. 2023-03-30]. Dostupné z: https://ctan.org/pkg/luavlna.</suffix>
+  </reference>
+  <reference id="3">
+    <prefix>[3]</prefix>
+    <title>The Lua-widow-control package: Automatically remove widows and orphans from any document</title>
+    <authors>
+      <author>Chernoff, Max</author>
+    </authors>
+    <URL>https://ctan.org/pkg/lua-widow-control</URL>
+    <year>2022</year>
+    <suffix>[online]. 2022. Ver. 3.0.0 [cit. 2023-03-30]. Dostupné z: https://ctan.org/pkg/lua-widow-control.</suffix>
+  </reference>
+  <reference id="4">
+    <prefix>[4]</prefix>
+    <title>The Linebreaker package: Prevent overflow boxes with LuaLaTeX</title>
+    <authors>
+      <author>Hoftich, Michal</author>
+    </authors>
+    <URL>https://ctan.org/pkg/linebreaker</URL>
+    <year>2023</year>
+    <suffix>[online]. 2023. Ver. 0.1c [cit. 2023-03-30]. Dostupné z: https://ctan.org/pkg/linebreaker.</suffix>
+  </reference>
+  <reference id="5">
+    <prefix>[5]</prefix>
+    <title>Modern CSS Techniques To Improve Legibility</title>
+    <authors>
+      <author>Cavazza, Edoardo</author>
+    </authors>
+    <URL>https://www.smashingmagazine.com/2020/07/css-techniques-legibility/</URL>
+    <booktitle>Smashing Magazine</booktitle>
+    <year>2020</year>
+    <suffix>[online]. 2020 [cit. 2023-03-30]. Dostupné z: https://www.smashingmagazine.com/2020/07/css-techniques-legibility/.</suffix>
+  </reference>
+  <reference id="6">
+    <prefix>[6]</prefix>
+    <title>The Typographic Scale</title>
+    <authors>
+      <author>Mortensen, Spencer</author>
+    </authors>
+    <URL>https://spencermortensen.com/articles/typographic-scale/</URL>
+    <year>2011</year>
+    <suffix>[online]. 2011. [cit. 2023-03-30]. Dostupné z: https://spencermortensen.com/articles/typographic-scale/.</suffix>
+  </reference>
+  <reference id="7">
+    <prefix>[7]</prefix>
+    <title>Automatically Removing Widows and Orphans with lua-widow-control</title>
+    <authors>
+      <author>Chernoff, Max</author>
+    </authors>
+    <ISSN>1211-6661</ISSN>
+    <URL>https://dx.doi.org/10.5300/2022-1-4/49</URL>
+    <number>1</number>
+    <pages>49-76</pages>
+    <publisher>Czech and Slovak TeX Users Group</publisher>
+    <year>2022</year>
+    <suffix>Dostupné z DOI: 10.5300/2022-1-4/49.</suffix>
+  </reference>
+</references>

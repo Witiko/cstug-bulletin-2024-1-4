@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article>
+  <title lang="cze">Profilování TeXových dokumentů</title>
+  <title lang="eng">Profiling TeX Input Files</title>
+  <author order="1">Ruckert, Martin</author>
+  <language>cze</language>
+  <summary lang="cze">Profiler je nástroj pro analýzu rychlosti kódu. Profiler může poskytovat informace o rychlosti jednotlivých řádků kódu nebo i celých procedur. Tyto informace jsou užitečné při optimalizaci kódu pro dosažení maximální rychlosti.
+
+Ačkoliv jsou profilery běžně dostupné, doposud neexistoval profiler pro programátory, kteří připravují TeXová makra. V tomto článku představuji texprof a texprofile: dva programy, které společně tvoří profiler pro TeXové dokumenty.</summary>
+  <summary lang="eng">A profiler is a tool used by programmers to analyze the run time behavior of the code they write. The profiler can map the CPU time of a program to specific files and lines, or it can map the time to individual procedures. This information is necessary if a programmer wants to optimize the code for speed.
+
+No such tool was so far available to programmers who write macro packages for TeX. This paper presents texprof and texprofile, two programs working together as a profiler for TeX input files.</summary>
+  <lang_summary>cze</lang_summary>
+  <doi>10.5300/2024-1-4/44</doi>
+  <category>informatics</category>
+  <range_pages>44-58</range_pages>
+</article>

@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<references>
+  <reference id="1">
+    <prefix>[1]</prefix>
+    <title>Fantasia Apocalyptica</title>
+    <authors>
+      <author>Knuth, Donald</author>
+    </authors>
+    <URL>https://www-cs-faculty.stanford.edu/~knuth/fant.html</URL>
+    <suffix>[online]. [cit. 2023-09-10]. Dostupné z: https://www-cs-faculty.stanford.edu/~knuth/fant.html.</suffix>
+  </reference>
+  <reference id="2">
+    <prefix>[2]</prefix>
+    <title>Fantasia Apocalyptica: Česká premiéra</title>
+    <authors>
+      <author>Fakulta informatiky Masarykovy Univerzity</author>
+    </authors>
+    <URL>https://youtu.be/wk7dEKMPP68</URL>
+    <year>2020</year>
+    <suffix>[online]. YouTube, 2020-01-01 [cit. 2023-09-10]. Dostupné z: https://youtu.be/wk7dEKMPP68.</suffix>
+  </reference>
+  <reference id="3">
+    <prefix>[3]</prefix>
+    <title>Fantasia Apocalyptica: The Czech première</title>
+    <authors>
+      <author>Lupták, Dávid</author>
+    </authors>
+    <ISSN>1211-6661</ISSN>
+    <URL>https://dx.doi.org/10.5300/2019-1-4/11</URL>
+    <number>1</number>
+    <pages>11-18</pages>
+    <publisher>Czech and Slovak TeX Users Group</publisher>
+    <year>2019</year>
+    <suffix>Dostupné z DOI: 10.5300/2019-1-4/11.</suffix>
+  </reference>
+  <reference id="4">
+    <prefix>[4]</prefix>
+    <title>Two questions and answers sessions by Donald Knuth at FI MU</title>
+    <authors>
+      <author>Szaniszlo, Tomáš</author>
+    </authors>
+    <ISSN>1211-6661</ISSN>
+    <URL>https://dx.doi.org/10.5300/2020-1-2/64</URL>
+    <number>1</number>
+    <pages>64-97</pages>
+    <publisher>Czech and Slovak TeX Users Group</publisher>
+    <year>2020</year>
+    <suffix>Dostupné z DOI: 10.5300/2020-1-2/64.</suffix>
+  </reference>
+  <reference id="5">
+    <prefix>[5]</prefix>
+    <title>Laboratoř elektronických multimediálních aplikací (LEMMA) – Filmový festival FI MU: Celouniverzitní spolek</title>
+    <authors/>
+    <URL>https://www.muni.cz/studenti/studentske-spolky/lemma-filmovy-festival-fi-mu</URL>
+    <suffix>[online]. [cit. 2024-04-08]. Dostupné z: https://www.muni.cz/studenti/studentske-spolky/lemma-filmovy-festival-fi-mu.</suffix>
+  </reference>
+  <reference id="6">
+    <prefix>[6]</prefix>
+    <title>Knuth Q&amp;A Session 1 (video, Sony PXW-X70)</title>
+    <authors>
+      <author>Šiler, Pavel</author>
+    </authors>
+    <URL>ssh://anxur.fi.muni.cz/export/fi-graphics/2019-10-Turing-week/2019-10-08-video-Knuth-QA1-Sony-Siler/</URL>
+    <year>2019</year>
+    <suffix>[online]. 2019-10-08. [cit. 2024-04-08]. Dostupné z: ssh://anxur.fi.muni.cz/export/fi-graphics/2019-10-Turing-week/2019-10-08-video-Knuth-QA1-Sony-Siler/.</suffix>
+  </reference>
+  <reference id="7">
+    <prefix>[7]</prefix>
+    <title>Knuth Q&amp;A Session 2 (video, Sony PXW-X70)</title>
+    <authors>
+      <author>Šiler, Pavel</author>
+    </authors>
+    <URL>ssh://anxur.fi.muni.cz/export/fi-graphics/2019-10-Turing-week/2019-10-09-video-Knuth-QA2-Sony-Siler/</URL>
+    <year>2019</year>
+    <suffix>[online]. 2019-10-09. [cit. 2024-04-08]. Dostupné z: ssh://anxur.fi.muni.cz/export/fi-graphics/2019-10-Turing-week/2019-10-09-video-Knuth-QA2-Sony-Siler/.</suffix>
+  </reference>
+  <reference id="8">
+    <prefix>[8]</prefix>
+    <title>Fantasia Apocalyptica (video, Sony PXW-X70)</title>
+    <authors>
+      <author>Šiler, Pavel</author>
+    </authors>
+    <URL>ssh://anxur.fi.muni.cz/export/fi-graphics/2019-10-Turing-week/2019-10-11-video-Fantasia-apocalyptica-Sony-Siler/</URL>
+    <year>2019</year>
+    <suffix>[online]. 2019-10-11. [cit. 2024-04-08]. Dostupné z: ssh://anxur.fi.muni.cz/export/fi-graphics/2019-10-Turing-week/2019-10-11-video-Fantasia-apocalyptica-Sony-Siler/.</suffix>
+  </reference>
+  <reference id="9">
+    <prefix>[9]</prefix>
+    <title>FFmpeg: A complete, cross-platform solution to record, convert and stream audio and video</title>
+    <authors/>
+    <URL>https://ffmpeg.org/</URL>
+    <suffix>[online]. [cit. 2024-04-11]. Dostupné z: https://ffmpeg.org/.</suffix>
+  </reference>
+  <reference id="10">
+    <prefix>[10]</prefix>
+    <title>waifu2x: Image Super-Resolution for Anime-Style Art</title>
+    <authors>
+      <author>nagadomi</author>
+    </authors>
+    <URL>https://github.com/nagadomi/waifu2x</URL>
+    <suffix>[online]. [cit. 2019-11-21]. Dostupné z: https://github.com/nagadomi/waifu2x.</suffix>
+  </reference>
+  <reference id="11">
+    <prefix>[11]</prefix>
+    <title>FFmpeg Filters Documentation: vidstabdetect</title>
+    <authors/>
+    <URL>https://ffmpeg.org/ffmpeg-filters.html#vidstabdetect</URL>
+    <suffix>[online]. [cit. 2024-04-08]. Dostupné z: https://ffmpeg.org/ffmpeg-filters.html#vidstabdetect.</suffix>
+  </reference>
+  <reference id="12">
+    <prefix>[12]</prefix>
+    <title>FFmpeg Filters Documentation: vidstabtransform</title>
+    <authors/>
+    <URL>https://ffmpeg.org/ffmpeg-filters.html#vidstabtransform</URL>
+    <year>2024</year>
+    <suffix>[online]. 2024-04-07. [cit. 2024-04-08]. Dostupné z: https://ffmpeg.org/ffmpeg-filters.html#vidstabtransform.</suffix>
+  </reference>
+  <reference id="13">
+    <prefix>[13]</prefix>
+    <title>FFmpeg Filters Documentation: minterpolate</title>
+    <authors/>
+    <URL>https://ffmpeg.org/ffmpeg-filters.html#minterpolate</URL>
+    <suffix>[online]. [cit. 2024-04-08]. Dostupné z: https://ffmpeg.org/ffmpeg-filters.html#minterpolate.</suffix>
+  </reference>
+  <reference id="14">
+    <prefix>[14]</prefix>
+    <title>FFmpeg Filters Documentation: yadif</title>
+    <authors/>
+    <URL>https://ffmpeg.org/ffmpeg-filters.html#yadif-1</URL>
+    <suffix>[online]. [cit. 2024-04-08]. Dostupné z: https://ffmpeg.org/ffmpeg-filters.html#yadif-1.</suffix>
+  </reference>
+  <reference id="15">
+    <prefix>[15]</prefix>
+    <title>Fantasia Apocalyptica (zvuk, Zoom H1)</title>
+    <authors>
+      <author>Sojka, Petr</author>
+    </authors>
+    <URL>ssh://anxur.fi.muni.cz/export/fi-graphics/2019-10-Turing-week/2019-10-11-audio-Fantasia-apocalyptica-ZoomH1-TS/</URL>
+    <year>2019</year>
+    <suffix>[online]. 2019-10-11. [cit. 2024-04-08]. Dostupné z: ssh://anxur.fi.muni.cz/export/fi-graphics/2019-10-Turing-week/2019-10-11-audio-Fantasia-apocalyptica-ZoomH1-TS/.</suffix>
+  </reference>
+  <reference id="16">
+    <prefix>[16]</prefix>
+    <title>Fantasia Apocalyptica (zvuk, mix)</title>
+    <authors>
+      <author>Holubář, Petr</author>
+    </authors>
+    <URL>ssh://anxur.fi.muni.cz/export/fi-graphics/2019-10-Turing-week/2019-10-11-audio-Fantasia-apocalyptica-Mix-Tudio/</URL>
+    <year>2019</year>
+    <suffix>[online]. 2019-10-11. [cit. 2024-04-08]. Dostupné z: ssh://anxur.fi.muni.cz/export/fi-graphics/2019-10-Turing-week/2019-10-11-audio-Fantasia-apocalyptica-Mix-Tudio/.</suffix>
+  </reference>
+  <reference id="17">
+    <prefix>[17]</prefix>
+    <title>Fantasia Apocalyptica (zvuk, Roland R26)</title>
+    <authors>
+      <author>Sojka, Petr</author>
+    </authors>
+    <URL>ssh://anxur.fi.muni.cz/export/fi-graphics/2019-10-Turing-week/2019-10-11-audio-Fantasia-apocalyptica-RolandR26zLemma-organ/</URL>
+    <year>2019</year>
+    <suffix>[online]. 2019-10-11. [cit. 2024-04-08]. Dostupné z: ssh://anxur.fi.muni.cz/export/fi-graphics/2019-10-Turing-week/2019-10-11-audio-Fantasia-apocalyptica-RolandR26zLemma-organ/.</suffix>
+  </reference>
+  <reference id="18">
+    <prefix>[18]</prefix>
+    <title>Fantasia Apocalyptica (zvuk, Sony PXW-X70)</title>
+    <authors>
+      <author>Šiler, Pavel</author>
+    </authors>
+    <URL>ssh://anxur.fi.muni.cz/export/fi-graphics/2019-10-Turing-week/2019-10-11-audio-Fantasia-apocalyptica-Sony-Siler/</URL>
+    <year>2019</year>
+    <suffix>[online]. 2019-10-11. [cit. 2024-04-08]. Dostupné z: ssh://anxur.fi.muni.cz/export/fi-graphics/2019-10-Turing-week/2019-10-11-audio-Fantasia-apocalyptica-Sony-Siler/.</suffix>
+  </reference>
+  <reference id="19">
+    <prefix>[19]</prefix>
+    <title>SSL G-Master Buss Compressor: “Glue” tracks into a smooth, cohesive mix</title>
+    <authors/>
+    <URL>https://www.waves.com/plugins/ssl-g-master-buss-compressor</URL>
+    <suffix>[online]. [cit. 2024-04-29]. Dostupné z: https://www.waves.com/plugins/ssl-g-master-buss-compressor.</suffix>
+  </reference>
+  <reference id="20">
+    <prefix>[20]</prefix>
+    <title>Fantasia Apocalyptica (zvuk, mix)</title>
+    <authors>
+      <author>Starý Novotný, Vít</author>
+    </authors>
+    <URL>ssh://anxur.fi.muni.cz/export/fi-graphics/2019-10-Turing-week/2019-11-19-audio-Fantasia-apocalyptica-Mix-Novotny/</URL>
+    <year>2019</year>
+    <suffix>[online]. 2019-11-19. [cit. 2024-04-08]. Dostupné z: ssh://anxur.fi.muni.cz/export/fi-graphics/2019-10-Turing-week/2019-11-19-audio-Fantasia-apocalyptica-Mix-Novotny/.</suffix>
+  </reference>
+  <reference id="21">
+    <prefix>[21]</prefix>
+    <title>Fantasia Apocalyptica (zvuk, mix)</title>
+    <authors>
+      <author>Starý Novotný, Vít</author>
+    </authors>
+    <URL>ssh://anxur.fi.muni.cz/export/fi-graphics/2019-10-Turing-week/2019-12-09-audio-Fantasia-apocalyptica-Mix-Novotny/</URL>
+    <year>2019</year>
+    <suffix>[online]. 2019-12-09. [cit. 2024-04-08]. Dostupné z: ssh://anxur.fi.muni.cz/export/fi-graphics/2019-10-Turing-week/2019-12-09-audio-Fantasia-apocalyptica-Mix-Novotny/.</suffix>
+  </reference>
+  <reference id="22">
+    <prefix>[22]</prefix>
+    <title>ChurchBellKonstanz.wav: Church bells of the Minster in Constance, Germany</title>
+    <authors>
+      <author>edsward</author>
+    </authors>
+    <URL>https://freesound.org/people/edsward/sounds/341866/</URL>
+    <year>2016</year>
+    <suffix>[online]. 2016-04-01. [cit. 2024-03-15]. Dostupné z: https://freesound.org/people/edsward/sounds/341866/.</suffix>
+  </reference>
+  <reference id="23">
+    <prefix>[23]</prefix>
+    <title>Úvodní slovo a závěr (video)</title>
+    <authors>
+      <author>Mačejovský, Šimon</author>
+    </authors>
+    <URL>ssh://anxur.fi.muni.cz/export/fi-graphics/2019-10-Turing-week/2019-12-24-video-strih-4k-Macejovsky/</URL>
+    <year>2019</year>
+    <suffix>[online]. 2019-12-24. [cit. 2024-05-02]. Dostupné z: ssh://anxur.fi.muni.cz/export/fi-graphics/2019-10-Turing-week/2019-12-24-video-strih-4k-Macejovsky/.</suffix>
+  </reference>
+  <reference id="24">
+    <prefix>[24]</prefix>
+    <title>Knuth Q&amp;A Session 1 (fotografie)</title>
+    <authors>
+      <author>Morávková, Martina</author>
+    </authors>
+    <URL>ssh://anxur.fi.muni.cz/export/fi-graphics/2019-10-08-foto-dek1-Morávková/</URL>
+    <year>2019</year>
+    <suffix>[online]. 2019-10-08. [cit. 2024-05-02]. Dostupné z: ssh://anxur.fi.muni.cz/export/fi-graphics/2019-10-08-foto-dek1-Morávková/.</suffix>
+  </reference>
+  <reference id="25">
+    <prefix>[25]</prefix>
+    <title>FFmpeg Filters Documentation: ass</title>
+    <authors/>
+    <URL>https://ffmpeg.org/ffmpeg-filters.html#ass</URL>
+    <suffix>[online]. [cit. 2024-05-02]. Dostupné z: https://ffmpeg.org/ffmpeg-filters.html#ass.</suffix>
+  </reference>
+  <reference id="26">
+    <prefix>[26]</prefix>
+    <title>libass</title>
+    <authors/>
+    <URL>https://github.com/libass/libass</URL>
+    <suffix>[online]. [cit. 2024-05-02]. Dostupné z: https://github.com/libass/libass.</suffix>
+  </reference>
+  <reference id="27">
+    <prefix>[27]</prefix>
+    <title>Enable font kerning by default</title>
+    <authors>
+      <author>Starý Novotný, Vít</author>
+    </authors>
+    <URL>https://github.com/Aegisub/Aegisub/issues/164</URL>
+    <year>2020</year>
+    <suffix>[online]. 2020-01-02. [cit. 2024-05-02]. Dostupné z: https://github.com/Aegisub/Aegisub/issues/164.</suffix>
+  </reference>
+  <reference id="28">
+    <prefix>[28]</prefix>
+    <title>Úvodní slovo a závěr (titulky)</title>
+    <authors>
+      <author>Starý Novotný, Vít</author>
+    </authors>
+    <URL>ssh://anxur.fi.muni.cz/export/fi-graphics/2019-10-Turing-week/2019-12-12-titulky-Novotny/</URL>
+    <year>2019</year>
+    <suffix>[online]. 2019-12-12. [cit. 2024-05-02]. Dostupné z: ssh://anxur.fi.muni.cz/export/fi-graphics/2019-10-Turing-week/2019-12-12-titulky-Novotny/.</suffix>
+  </reference>
+  <reference id="29">
+    <prefix>[29]</prefix>
+    <title>Aegisub: Advanced Subtitle Editor</title>
+    <authors/>
+    <URL>https://aegisub.org/</URL>
+    <suffix>[online]. [cit. 2024-05-02]. Dostupné z: https://aegisub.org/.</suffix>
+  </reference>
+  <reference id="30">
+    <prefix>[30]</prefix>
+    <title>Image Super-Resolution Using Deep Convolutional Networks</title>
+    <authors>
+      <author>Dong, Chao</author>
+    </authors>
+    <ISSN>0162-8828</ISSN>
+    <URL>https://dx.doi.org/10.1109/TPAMI.2015.2439281</URL>
+    <number>2</number>
+    <pages>295-307</pages>
+    <publisher>Institute of Electrical and Electronics Engineers (IEEE)</publisher>
+    <volume>38</volume>
+    <year>2016</year>
+    <suffix>Dostupné z DOI: 10.1109/TPAMI.2015.2439281.</suffix>
+  </reference>
+  <reference id="31">
+    <prefix>[31]</prefix>
+    <title>FFmpeg: H.265/HEVC Video Encoding Guide</title>
+    <authors/>
+    <URL>https://trac.ffmpeg.org/wiki/Encode/H.265</URL>
+    <suffix>[online]. [cit. 2024-10-03]. Dostupné z: https://trac.ffmpeg.org/wiki/Encode/H.265.</suffix>
+  </reference>
+  <reference id="32">
+    <prefix>[32]</prefix>
+    <title>FFmpeg: AAC Audio Encoding Guide</title>
+    <authors/>
+    <URL>https://trac.ffmpeg.org/wiki/Encode/AAC</URL>
+    <suffix>[online]. [cit. 2024-10-31]. Dostupné z: https://trac.ffmpeg.org/wiki/Encode/AAC.</suffix>
+  </reference>
+  <reference id="33">
+    <prefix>[33]</prefix>
+    <title>Fantasia Apocalyptica Illustrated</title>
+    <authors>
+      <author>Knuth, Donald</author>
+      <author>Bibby, Duane</author>
+    </authors>
+    <ISBN>978-1-68400-044-9</ISBN>
+    <year>2018</year>
+    <suffix/>
+  </reference>
+  <reference id="34">
+    <prefix>[34]</prefix>
+    <title>Fantasia Apocalyptica</title>
+    <authors>
+      <author>Morland, Isaac</author>
+    </authors>
+    <URL>https://www-cs-faculty.stanford.edu/~knuth/fant-screen2-texts.pdf</URL>
+    <year>2018</year>
+    <suffix>[online]. 2018. [cit. 2024-08-05]. Dostupné z: https://www-cs-faculty.stanford.edu/~knuth/fant-screen2-texts.pdf.</suffix>
+  </reference>
+  <reference id="35">
+    <prefix>[35]</prefix>
+    <title>PDFtk: The PDF Toolkit</title>
+    <authors/>
+    <URL>https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/</URL>
+    <suffix>[online]. [cit. 2024-08-26]. Dostupné z: https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/.</suffix>
+  </reference>
+  <reference id="36">
+    <prefix>[36]</prefix>
+    <title>ImageMagick: Mastering Digital Image Alchemy</title>
+    <authors/>
+    <URL>https://imagemagick.org/</URL>
+    <suffix>[online]. [cit. 2024-10-03]. Dostupné z: https://imagemagick.org/.</suffix>
+  </reference>
+  <reference id="37">
+    <prefix>[37]</prefix>
+    <title>Fantasia Apocalyptica Illustrated</title>
+    <authors>
+      <author>Bibby, Duane R.</author>
+      <author>Knuth, Donald E.</author>
+    </authors>
+    <ISBN>978-1-68400-044-9</ISBN>
+    <URL>https://www-cs-faculty.stanford.edu/~knuth/fant-screen1-art.pdf</URL>
+    <year>2018</year>
+    <suffix>Dostupné také z: https://www-cs-faculty.stanford.edu/~knuth/fant-screen1-art.pdf.</suffix>
+  </reference>
+  <reference id="38">
+    <prefix>[38]</prefix>
+    <title>Flowblade: Free &amp; Libre Video Editor</title>
+    <authors/>
+    <URL>https://jliljebl.github.io/flowblade/</URL>
+    <suffix>[online]. [cit. 2024-10-03]. Dostupné z: https://jliljebl.github.io/flowblade/.</suffix>
+  </reference>
+  <reference id="39">
+    <prefix>[39]</prefix>
+    <title>MLT Multimedia Framework</title>
+    <authors/>
+    <URL>https://www.mltframework.org/</URL>
+    <suffix>[online]. [cit. 2024-10-03]. Dostupné z: https://www.mltframework.org/.</suffix>
+  </reference>
+  <reference id="40">
+    <prefix>[40]</prefix>
+    <title>FFmpeg: Concatenating media files</title>
+    <authors/>
+    <URL>https://trac.ffmpeg.org/wiki/Concatenate</URL>
+    <suffix>[online]. [cit. 2024-10-03]. Dostupné z: https://trac.ffmpeg.org/wiki/Concatenate.</suffix>
+  </reference>
+  <reference id="41">
+    <prefix>[41]</prefix>
+    <title>Knuth: Fantasia Apocalyptica D3 call</title>
+    <authors>
+      <author>Szaniszlo, Tomáš</author>
+    </authors>
+    <URL>https://gitlab.fi.muni.cz/unix/beeplay/-/commit/68c59a75</URL>
+    <year>2019</year>
+    <suffix>[online]. 2019-12-18. [cit. 2024-10-23]. Dostupné z: https://gitlab.fi.muni.cz/unix/beeplay/-/commit/68c59a75.</suffix>
+  </reference>
+</references>

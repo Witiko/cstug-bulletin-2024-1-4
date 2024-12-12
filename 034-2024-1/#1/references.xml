@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<references>
+  <reference id="1">
+    <prefix>[1]</prefix>
+    <title>LaTeX Tagged PDF Feasibility Evaluation</title>
+    <authors>
+      <author>Mittelbach, Frank</author>
+      <author>Fischer, Ulrike</author>
+      <author>Rowley, Chris</author>
+    </authors>
+    <URL>https://www.latex-project.org/publications/2020-tagged-pdf-feasibility.pdf</URL>
+    <year>2022</year>
+    <suffix>[online]. 2022-04. [cit. 2024-11-25]. Dostupné z: https://www.latex-project.org/publications/2020-tagged-pdf-feasibility.pdf.</suffix>
+  </reference>
+  <reference id="2">
+    <prefix>[2]</prefix>
+    <title>Profiling TeX input files</title>
+    <authors>
+      <author>Ruckert, Martin</author>
+    </authors>
+    <ISSN>0896-3207</ISSN>
+    <URL>https://dx.doi.org/10.47397/tb/45-2/tb140ruckert-profiler</URL>
+    <number>2</number>
+    <pages>203-210</pages>
+    <publisher>TeX Users Group</publisher>
+    <volume>45</volume>
+    <year>2024</year>
+    <suffix>Dostupné z DOI: 10.47397/tb/45-2/tb140ruckert-profiler.</suffix>
+  </reference>
+  <reference id="3">
+    <prefix>[3]</prefix>
+    <title>Markdown themes in practice</title>
+    <authors>
+      <author>Starý Novotný, Vít</author>
+    </authors>
+    <URL>https://www.tug.org/tug2024/slides/starynovotny-markdown-themes.pdf</URL>
+    <year>2024</year>
+    <suffix>[online]. 2024-07-19. [cit. 2024-11-18]. Dostupné z: https://www.tug.org/tug2024/slides/starynovotny-markdown-themes.pdf.</suffix>
+  </reference>
+  <reference id="4">
+    <prefix>[4]</prefix>
+    <title>Markdown themes in practice</title>
+    <authors>
+      <author>Novotný, Vít Starý</author>
+    </authors>
+    <ISSN>0896-3207</ISSN>
+    <URL>https://dx.doi.org/10.47397/tb/45-2/tb140starynovotny-markdown-themes</URL>
+    <number>2</number>
+    <pages>211-220</pages>
+    <publisher>TeX Users Group</publisher>
+    <volume>45</volume>
+    <year>2024</year>
+    <suffix>Dostupné z DOI: 10.47397/tb/45-2/tb140starynovotny-markdown-themes.</suffix>
+  </reference>
+  <reference id="5">
+    <prefix>[5]</prefix>
+    <title>TODO: Doplnit!</title>
+    <authors/>
+    <URL>https://dx.doi.org/tb45-2/tb140peischl-pipeline</URL>
+    <suffix>TODO: Doplnit!</suffix>
+  </reference>
+  <reference id="6">
+    <prefix>[6]</prefix>
+    <title>Web page to PDF conversion with Rmodepdf: Leveraging LuaLaTeX for e-book reader-friendly documents</title>
+    <authors>
+      <author>Hoftich, Michal</author>
+    </authors>
+    <URL>https://www.tug.org/tug2024/slides/hoftich-rmodepdf.pdf</URL>
+    <year>2024</year>
+    <suffix>[prezentační slajdy] [online]. 2024-07-16. [cit. 2024-11-18]. Dostupné z: https://www.tug.org/tug2024/slides/hoftich-rmodepdf.pdf.</suffix>
+  </reference>
+  <reference id="7">
+    <prefix>[7]</prefix>
+    <title>Web page to PDF conversion with Rmodepdf: Leveraging LuaLaTeX for e-book reader-friendly documents</title>
+    <authors>
+      <author>Hoftich, Michal</author>
+    </authors>
+    <ISSN>0896-3207</ISSN>
+    <URL>https://dx.doi.org/10.47397/tb/45-2/tb140hoftich-rmodepdf</URL>
+    <number>2</number>
+    <pages>246-252</pages>
+    <publisher>TeX Users Group</publisher>
+    <volume>45</volume>
+    <year>2024</year>
+    <suffix>Dostupné z DOI: 10.47397/tb/45-2/tb140hoftich-rmodepdf.</suffix>
+  </reference>
+  <reference id="8">
+    <prefix>[8]</prefix>
+    <title>Expanding hyphenation patterns across Slavic languages</title>
+    <authors>
+      <author>Sojka, Ondřej</author>
+    </authors>
+    <URL>https://www.tug.org/tug2024/slides/sojka-slavic.pdf</URL>
+    <year>2024</year>
+    <suffix>[prezentační slajdy] [online]. 2024-07-21. [cit. 2024-11-18]. Dostupné z: https://www.tug.org/tug2024/slides/sojka-slavic.pdf.</suffix>
+  </reference>
+  <reference id="9">
+    <prefix>[9]</prefix>
+    <title>Expanding hyphenation patterns across Slavic languages</title>
+    <authors>
+      <author>Sojka, Ondřej</author>
+    </authors>
+    <ISSN>0896-3207</ISSN>
+    <URL>https://dx.doi.org/10.47397/tb/45-2/tb140sojka-slavic</URL>
+    <number>2</number>
+    <pages>268-270</pages>
+    <publisher>TeX Users Group</publisher>
+    <volume>45</volume>
+    <year>2024</year>
+    <suffix>Dostupné z DOI: 10.47397/tb/45-2/tb140sojka-slavic.</suffix>
+  </reference>
+  <reference id="10">
+    <prefix>[10]</prefix>
+    <title>TUG 2024 Lectures</title>
+    <authors/>
+    <URL>https://www.youtube.com/playlist?list=PLLt9mKFAx-FZCy6aqYbXSNyaAkr8Nv14X</URL>
+    <suffix>Dostupné z: https://www.youtube.com/playlist?list=PLLt9mKFAx-FZCy6aqYbXSNyaAkr8Nv14X.</suffix>
+  </reference>
+</references>
