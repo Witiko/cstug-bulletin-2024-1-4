@@ -41,7 +41,9 @@
   <reference id="4">
     <prefix>[4]</prefix>
     <title>The LaTeX Project</title>
-    <authors/>
+    <authors>
+      <author>LaTeX Team</author>
+    </authors>
     <URL>https://github.com/latex3/</URL>
     <suffix>[online]. [cit. 2024-08-29]. Dostupné z: https://github.com/latex3/.</suffix>
   </reference>
@@ -92,21 +94,27 @@
   <reference id="9">
     <prefix>[9]</prefix>
     <title>Workflow syntax for GitHub Actions</title>
-    <authors/>
+    <authors>
+      <author>GitHub</author>
+    </authors>
     <URL>https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions</URL>
     <suffix>[online]. [cit. 2024-09-03]. Dostupné z: https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions.</suffix>
   </reference>
   <reference id="10">
     <prefix>[10]</prefix>
     <title>Choosing GitHub-hosted runners</title>
-    <authors/>
+    <authors>
+      <author>GitHub</author>
+    </authors>
     <URL>https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#choosing-github-hosted-runners</URL>
     <suffix>[online]. [cit. 2024-09-03]. Dostupné z: https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#choosing-github-hosted-runners.</suffix>
   </reference>
   <reference id="11">
     <prefix>[11]</prefix>
     <title>GitHub Workflow template for LaTeX packages</title>
-    <authors/>
+    <authors>
+      <author>GitHub</author>
+    </authors>
     <URL>https://github.com/islandoftex/tug2024-workflow-github</URL>
     <suffix>[online]. [cit. 2024-09-03]. Dostupné z: https://github.com/islandoftex/tug2024-workflow-github.</suffix>
   </reference>
@@ -142,7 +150,9 @@
   <reference id="14">
     <prefix>[14]</prefix>
     <title>Checkout action</title>
-    <authors/>
+    <authors>
+      <author>GitHub</author>
+    </authors>
     <URL>https://github.com/actions/checkout/</URL>
     <suffix>[online]. [cit. 2024-09-03]. Dostupné z: https://github.com/actions/checkout/.</suffix>
   </reference>
@@ -167,28 +177,36 @@
   <reference id="17">
     <prefix>[17]</prefix>
     <title>Using Forgejo Actions (Self-hosted)</title>
-    <authors/>
+    <authors>
+      <author>Forgejo</author>
+    </authors>
     <URL>https://docs.codeberg.org/ci/actions/</URL>
     <suffix>[online]. [cit. 2024-09-10]. Dostupné z: https://docs.codeberg.org/ci/actions/.</suffix>
   </reference>
   <reference id="18">
     <prefix>[18]</prefix>
     <title>GitLab Workflow template for LaTeX documents</title>
-    <authors/>
+    <authors>
+      <author>GitHub</author>
+    </authors>
     <URL>https://gitlab.com/islandoftex/texmf/tug2024-workflow-document-gitlab</URL>
     <suffix>[online]. [cit. 2024-09-10]. Dostupné z: https://gitlab.com/islandoftex/texmf/tug2024-workflow-document-gitlab.</suffix>
   </reference>
   <reference id="19">
     <prefix>[19]</prefix>
     <title>TeX Live Docker image</title>
-    <authors/>
+    <authors>
+      <author>Island of TeX</author>
+    </authors>
     <URL>https://gitlab.com/islandoftex/images/texlive</URL>
     <suffix>[online]. [cit. 2024-07-20]. Dostupné z: https://gitlab.com/islandoftex/images/texlive.</suffix>
   </reference>
   <reference id="20">
     <prefix>[20]</prefix>
     <title>DEPP: Dependency Printer for TeX Live</title>
-    <authors/>
+    <authors>
+      <author>Island of TeX</author>
+    </authors>
     <URL>https://gitlab.com/islandoftex/texmf/depp</URL>
     <suffix>[online]. [cit. 2024-09-15]. Dostupné z: https://gitlab.com/islandoftex/texmf/depp.</suffix>
   </reference>
@@ -213,7 +231,9 @@
   <reference id="23">
     <prefix>[23]</prefix>
     <title>teatimeguest/setup-texlive-action repository</title>
-    <authors/>
+    <authors>
+      <author>teatimeguest</author>
+    </authors>
     <URL>https://github.com/teatimeguest/setup-texlive-action</URL>
     <suffix>[online]. [cit. 2024-09-15]. Dostupné z: https://github.com/teatimeguest/setup-texlive-action.</suffix>
   </reference>
@@ -238,14 +258,18 @@
   <reference id="26">
     <prefix>[26]</prefix>
     <title>nektos/act: Run your GitHub Actions locally</title>
-    <authors/>
+    <authors>
+      <author>Casey Lee</author>
+    </authors>
     <URL>https://github.com/nektos/act</URL>
     <suffix>[online]. [cit. 2024-09-16]. Dostupné z: https://github.com/nektos/act.</suffix>
   </reference>
   <reference id="27">
     <prefix>[27]</prefix>
     <title>Pretesting TeX Live 2024</title>
-    <authors/>
+    <authors>
+      <author>TeX Users Group</author>
+    </authors>
     <URL>https://www.tug.org/texlive/pretest.html</URL>
     <suffix>[online]. [cit. 2024-09-16]. Dostupné z: https://www.tug.org/texlive/pretest.html.</suffix>
   </reference>

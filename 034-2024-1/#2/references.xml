@@ -50,7 +50,9 @@
   <reference id="5">
     <prefix>[5]</prefix>
     <title>Laboratoř elektronických multimediálních aplikací (LEMMA) – Filmový festival FI MU: Celouniverzitní spolek</title>
-    <authors/>
+    <authors>
+      <author>Masaryk University</author>
+    </authors>
     <URL>https://www.muni.cz/studenti/studentske-spolky/lemma-filmovy-festival-fi-mu</URL>
     <suffix>[online]. [cit. 2024-04-08]. Dostupné z: https://www.muni.cz/studenti/studentske-spolky/lemma-filmovy-festival-fi-mu.</suffix>
   </reference>
@@ -87,7 +89,9 @@
   <reference id="9">
     <prefix>[9]</prefix>
     <title>FFmpeg: A complete, cross-platform solution to record, convert and stream audio and video</title>
-    <authors/>
+    <authors>
+      <author>FFmpeg contributors</author>
+    </authors>
     <URL>https://ffmpeg.org/</URL>
     <suffix>[online]. [cit. 2024-04-11]. Dostupné z: https://ffmpeg.org/.</suffix>
   </reference>
@@ -103,14 +107,18 @@
   <reference id="11">
     <prefix>[11]</prefix>
     <title>FFmpeg Filters Documentation: vidstabdetect</title>
-    <authors/>
+    <authors>
+      <author>FFmpeg contributors</author>
+    </authors>
     <URL>https://ffmpeg.org/ffmpeg-filters.html#vidstabdetect</URL>
     <suffix>[online]. [cit. 2024-04-08]. Dostupné z: https://ffmpeg.org/ffmpeg-filters.html#vidstabdetect.</suffix>
   </reference>
   <reference id="12">
     <prefix>[12]</prefix>
     <title>FFmpeg Filters Documentation: vidstabtransform</title>
-    <authors/>
+    <authors>
+      <author>FFmpeg contributors</author>
+    </authors>
     <URL>https://ffmpeg.org/ffmpeg-filters.html#vidstabtransform</URL>
     <year>2024</year>
     <suffix>[online]. 2024-04-07. [cit. 2024-04-08]. Dostupné z: https://ffmpeg.org/ffmpeg-filters.html#vidstabtransform.</suffix>
@@ -118,14 +126,18 @@
   <reference id="13">
     <prefix>[13]</prefix>
     <title>FFmpeg Filters Documentation: minterpolate</title>
-    <authors/>
+    <authors>
+      <author>FFmpeg contributors</author>
+    </authors>
     <URL>https://ffmpeg.org/ffmpeg-filters.html#minterpolate</URL>
     <suffix>[online]. [cit. 2024-04-08]. Dostupné z: https://ffmpeg.org/ffmpeg-filters.html#minterpolate.</suffix>
   </reference>
   <reference id="14">
     <prefix>[14]</prefix>
     <title>FFmpeg Filters Documentation: yadif</title>
-    <authors/>
+    <authors>
+      <author>FFmpeg contributors</author>
+    </authors>
     <URL>https://ffmpeg.org/ffmpeg-filters.html#yadif-1</URL>
     <suffix>[online]. [cit. 2024-04-08]. Dostupné z: https://ffmpeg.org/ffmpeg-filters.html#yadif-1.</suffix>
   </reference>
@@ -172,7 +184,9 @@
   <reference id="19">
     <prefix>[19]</prefix>
     <title>SSL G-Master Buss Compressor: “Glue” tracks into a smooth, cohesive mix</title>
-    <authors/>
+    <authors>
+      <author>Waves</author>
+    </authors>
     <URL>https://www.waves.com/plugins/ssl-g-master-buss-compressor</URL>
     <suffix>[online]. [cit. 2024-04-29]. Dostupné z: https://www.waves.com/plugins/ssl-g-master-buss-compressor.</suffix>
   </reference>
@@ -229,14 +243,18 @@
   <reference id="25">
     <prefix>[25]</prefix>
     <title>FFmpeg Filters Documentation: ass</title>
-    <authors/>
+    <authors>
+      <author>FFmpeg contributors</author>
+    </authors>
     <URL>https://ffmpeg.org/ffmpeg-filters.html#ass</URL>
     <suffix>[online]. [cit. 2024-05-02]. Dostupné z: https://ffmpeg.org/ffmpeg-filters.html#ass.</suffix>
   </reference>
   <reference id="26">
     <prefix>[26]</prefix>
     <title>libass</title>
-    <authors/>
+    <authors>
+      <author>libass contributors</author>
+    </authors>
     <URL>https://github.com/libass/libass</URL>
     <suffix>[online]. [cit. 2024-05-02]. Dostupné z: https://github.com/libass/libass.</suffix>
   </reference>
@@ -263,7 +281,9 @@
   <reference id="29">
     <prefix>[29]</prefix>
     <title>Aegisub: Advanced Subtitle Editor</title>
-    <authors/>
+    <authors>
+      <author>Aegisub contributors</author>
+    </authors>
     <URL>https://aegisub.org/</URL>
     <suffix>[online]. [cit. 2024-05-02]. Dostupné z: https://aegisub.org/.</suffix>
   </reference>
@@ -285,14 +305,18 @@
   <reference id="31">
     <prefix>[31]</prefix>
     <title>FFmpeg: H.265/HEVC Video Encoding Guide</title>
-    <authors/>
+    <authors>
+      <author>FFmpeg contributors</author>
+    </authors>
     <URL>https://trac.ffmpeg.org/wiki/Encode/H.265</URL>
     <suffix>[online]. [cit. 2024-10-03]. Dostupné z: https://trac.ffmpeg.org/wiki/Encode/H.265.</suffix>
   </reference>
   <reference id="32">
     <prefix>[32]</prefix>
     <title>FFmpeg: AAC Audio Encoding Guide</title>
-    <authors/>
+    <authors>
+      <author>FFmpeg contributors</author>
+    </authors>
     <URL>https://trac.ffmpeg.org/wiki/Encode/AAC</URL>
     <suffix>[online]. [cit. 2024-10-31]. Dostupné z: https://trac.ffmpeg.org/wiki/Encode/AAC.</suffix>
   </reference>
@@ -320,14 +344,18 @@
   <reference id="35">
     <prefix>[35]</prefix>
     <title>PDFtk: The PDF Toolkit</title>
-    <authors/>
+    <authors>
+      <author>PDF Labs</author>
+    </authors>
     <URL>https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/</URL>
     <suffix>[online]. [cit. 2024-08-26]. Dostupné z: https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/.</suffix>
   </reference>
   <reference id="36">
     <prefix>[36]</prefix>
     <title>ImageMagick: Mastering Digital Image Alchemy</title>
-    <authors/>
+    <authors>
+      <author>ImageMagick contributors</author>
+    </authors>
     <URL>https://imagemagick.org/</URL>
     <suffix>[online]. [cit. 2024-10-03]. Dostupné z: https://imagemagick.org/.</suffix>
   </reference>
@@ -346,21 +374,27 @@
   <reference id="38">
     <prefix>[38]</prefix>
     <title>Flowblade: Free &amp; Libre Video Editor</title>
-    <authors/>
+    <authors>
+      <author>Flowblade contributors</author>
+    </authors>
     <URL>https://jliljebl.github.io/flowblade/</URL>
     <suffix>[online]. [cit. 2024-10-03]. Dostupné z: https://jliljebl.github.io/flowblade/.</suffix>
   </reference>
   <reference id="39">
     <prefix>[39]</prefix>
     <title>MLT Multimedia Framework</title>
-    <authors/>
+    <authors>
+      <author>MLT contributors</author>
+    </authors>
     <URL>https://www.mltframework.org/</URL>
     <suffix>[online]. [cit. 2024-10-03]. Dostupné z: https://www.mltframework.org/.</suffix>
   </reference>
   <reference id="40">
     <prefix>[40]</prefix>
     <title>FFmpeg: Concatenating media files</title>
-    <authors/>
+    <authors>
+      <author>FFmpeg contributors</author>
+    </authors>
     <URL>https://trac.ffmpeg.org/wiki/Concatenate</URL>
     <suffix>[online]. [cit. 2024-10-03]. Dostupné z: https://trac.ffmpeg.org/wiki/Concatenate.</suffix>
   </reference>

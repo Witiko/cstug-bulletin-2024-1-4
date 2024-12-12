@@ -17,7 +17,9 @@
   <reference id="2">
     <prefix>[2]</prefix>
     <title>TeX – LaTeX Stack Exchange</title>
-    <authors/>
+    <authors>
+      <author>Stack Exchange</author>
+    </authors>
     <URL>https://tex.stackexchange.com/</URL>
     <suffix>[online]. [cit. 2024-04-08]. Dostupné z: https://tex.stackexchange.com/.</suffix>
   </reference>
@@ -33,7 +35,9 @@
   <reference id="4">
     <prefix>[4]</prefix>
     <title>TeX Live</title>
-    <authors/>
+    <authors>
+      <author>TeX Users Group</author>
+    </authors>
     <URL>http://tug.org/texlive/</URL>
     <suffix>[online]. [cit. 2024-02-26]. Dostupné z: http://tug.org/texlive/.</suffix>
   </reference>

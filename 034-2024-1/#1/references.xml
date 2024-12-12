@@ -54,10 +54,18 @@
   </reference>
   <reference id="5">
     <prefix>[5]</prefix>
-    <title>TODO: Doplnit!</title>
-    <authors/>
-    <URL>https://dx.doi.org/tb45-2/tb140peischl-pipeline</URL>
-    <suffix>TODO: Doplnit!</suffix>
+    <title>Creation of LaTeX documents using a cloud-based pipeline</title>
+    <authors>
+      <author>Peischl, Marei</author>
+    </authors>
+    <ISSN>0896-3207</ISSN>
+    <URL>https://dx.doi.org/10.47397/tb/45-2/tb140peischl-pipeline</URL>
+    <number>2</number>
+    <pages>227-233</pages>
+    <publisher>TeX Users Group</publisher>
+    <volume>45</volume>
+    <year>2024</year>
+    <suffix>Dostupné z DOI: 10.47397/tb/45-2/tb140peischl-pipeline.</suffix>
   </reference>
   <reference id="6">
     <prefix>[6]</prefix>
@@ -112,7 +120,9 @@
   <reference id="10">
     <prefix>[10]</prefix>
     <title>TUG 2024 Lectures</title>
-    <authors/>
+    <authors>
+      <author>TeX Users Group</author>
+    </authors>
     <URL>https://www.youtube.com/playlist?list=PLLt9mKFAx-FZCy6aqYbXSNyaAkr8Nv14X</URL>
     <suffix>Dostupné z: https://www.youtube.com/playlist?list=PLLt9mKFAx-FZCy6aqYbXSNyaAkr8Nv14X.</suffix>
   </reference>
