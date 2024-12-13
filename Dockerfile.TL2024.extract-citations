@@ -1,6 +1,0 @@
-FROM texlive/texlive:latest
-RUN apt update
-RUN apt install -qy libxml2-utils xsltproc
-RUN luaotfload-tool -u || true
-RUN cp "$(find /usr/local/texlive -name texlive-fontconfig.conf)" /etc/fonts/conf.d/09-texlive-fonts.conf || true
-RUN fc-cache -fsv

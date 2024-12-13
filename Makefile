@@ -15,7 +15,7 @@ PDFLATEX_2020 = $(DOCKER_RUN) texlive/texlive:TL2020-historic-with-cache pdflate
 PDFLATEX_2023 = $(DOCKER_RUN) texlive/texlive:TL2023-historic-with-cache pdflatex
 LATEXMK = $(DOCKER_RUN) texlive/texlive:TL2020-historic-with-cache latexmk
 PDFTK = $(DOCKER_RUN) mnuessler/pdftk
-EXTRACT_CITATIONS = $(DOCKER_RUN) texlive/texlive:TL2024-historic-with-cache-xml make -f ../extract-citations/extract-citations.mk -C
+EXTRACT_CITATIONS = $(DOCKER_RUN) texlive/texlive:TL2023-historic-with-cache-xml make -f ../extract-citations/extract-citations.mk -C
 PARALLEL = parallel --joblog joblog --halt now,fail=1 --jobs 0 --
 
 FONTS = matha8.pfb matha9.pfb matha10.pfb mathb10.pfb
@@ -50,8 +50,7 @@ images: FORCE
 	$(DOCKER) build . -f Dockerfile.TL2022 -t texlive/texlive:TL2022-historic-with-cache
 	$(DOCKER) build . -f Dockerfile.TL2022.StaryNovotny-fantasia -t texlive/texlive:TL2022-historic-with-cache-fantasia
 	$(DOCKER) build . -f Dockerfile.TL2023 -t texlive/texlive:TL2023-historic-with-cache
-	$(DOCKER) build . -f Dockerfile.TL2024 -t texlive/texlive:TL2024-historic-with-cache
-	$(DOCKER) build . -f Dockerfile.TL2024.extract-citations -t texlive/texlive:TL2024-historic-with-cache-xml
+	$(DOCKER) build . -f Dockerfile.TL2023.extract-citations -t texlive/texlive:TL2023-historic-with-cache-xml
 
 bul.pdf: bul.tex $(FONTS) FORCE
 	$(LATEXMK) -c $<
