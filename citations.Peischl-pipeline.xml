@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<citation_list xmlns:bltx="http://biblatex-biber.sourceforge.net/biblatexml">
+  <citation>
+    <journal_title>TUGboat</journal_title>
+    <contributors>
+      <person_name contributor_role="author" sequence="first">
+        <given_name>Marei</given_name>
+        <surname>Peischl</surname>
+      </person_name>
+      <person_name contributor_role="author" sequence="additional">
+        <given_name>Marcel</given_name>
+        <surname>Krüger</surname>
+      </person_name>
+      <person_name contributor_role="author" sequence="additional">
+        <given_name>Oliver</given_name>
+        <surname>Kopp</surname>
+      </person_name>
+    </contributors>
+    <volume>45</volume>
+    <issue>2</issue>
+    <first_page>227</first_page>
+    <cYear>2024</cYear>
+    <article_title>Creation of LaTeX documents using a cloud-based pipeline</article_title>
+  </citation>
+  <citation>
+    <doi>10.5300/2021-1-4/3</doi>
+  </citation>
+  <citation>
+    <contributors>
+      <person_name contributor_role="author" sequence="first">
+        <given_name>Michal</given_name>
+        <surname>Stano</surname>
+      </person_name>
+      <person_name contributor_role="author" sequence="additional">
+        <given_name>Vít</given_name>
+        <surname>
+          Starý
+          Novotný
+        </surname>
+      </person_name>
+    </contributors>
+    <article_title>Overleaf Community Edition: Postup inštalácie a rozdiely oproti Overleaf Professional</article_title>
+    <additionalcontent>
+      <url cited="2024-09-03">http://www.overleaf.com/read/hmxhshbgnbzm</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <article_title>The LaTeX Project</article_title>
+    <additionalcontent>
+      <url cited="2024-08-29">https://github.com/latex3/</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <contributors>
+      <person_name contributor_role="author" sequence="first">
+        <surname>
+          The
+          LaTeX
+          Project
+        </surname>
+      </person_name>
+    </contributors>
+    <article_title>l3build: A testing and building system for (La)TeX</article_title>
+    <additionalcontent>
+      <url cited="2024-08-29">https://ctan.org/pkg/l3build</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <doi>10.47397/tb/43-1/tb133wright-l3build</doi>
+  </citation>
+  <citation>
+    <contributors>
+      <person_name contributor_role="author" sequence="first">
+        <given_name>Marei</given_name>
+        <surname>Peischl</surname>
+      </person_name>
+      <person_name contributor_role="author" sequence="additional">
+        <given_name>Marcel</given_name>
+        <surname>Krüger</surname>
+      </person_name>
+      <person_name contributor_role="author" sequence="additional">
+        <given_name>Oliver</given_name>
+        <surname>Kopp</surname>
+      </person_name>
+    </contributors>
+    <article_title>TeXhackse/tugboat-tug2024-cicd</article_title>
+    <additionalcontent>
+      <url cited="2024-08-30">https://tug.org/l/peischl-cicd2024</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <contributors>
+      <person_name contributor_role="author" sequence="first">
+        <given_name>Cheng</given_name>
+        <surname>Xu</surname>
+      </person_name>
+    </contributors>
+    <article_title>xu-cheng/latex-action: GitHub Action to compile LaTeX documents</article_title>
+    <additionalcontent>
+      <url cited="2024-09-03">https://github.com/xu-cheng/latex-action/</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <article_title>Workflow syntax for GitHub Actions</article_title>
+    <additionalcontent>
+      <url cited="2024-09-03">https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <article_title>Choosing GitHub-hosted runners</article_title>
+    <additionalcontent>
+      <url cited="2024-09-03">https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#choosing-github-hosted-runners</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <article_title>GitHub Workflow template for LaTeX packages</article_title>
+    <additionalcontent>
+      <url cited="2024-09-03">https://github.com/islandoftex/tug2024-workflow-github</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <issn media_type="print">0896-3207</issn>
+    <journal_title>TUGboat</journal_title>
+    <contributors>
+      <person_name contributor_role="author" sequence="first">
+        <surname>
+          Island
+          of
+          TeX
+        </surname>
+      </person_name>
+    </contributors>
+    <volume>40</volume>
+    <issue>3</issue>
+    <cYear>2019</cYear>
+    <article_title>Providing Docker images for TeX Live and ConTeXt</article_title>
+    <additionalcontent>
+      <url>https://tug.org/TUGboat/tb40-3/tb126island-docker.pdf</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <doi>10.47397/tb/44-2/tb137island-docker</doi>
+  </citation>
+  <citation>
+    <article_title>Checkout action</article_title>
+    <additionalcontent>
+      <url cited="2024-09-03">https://github.com/actions/checkout/</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <contributors>
+      <person_name contributor_role="author" sequence="first">
+        <given_name>John</given_name>
+        <surname>Collins</surname>
+      </person_name>
+    </contributors>
+    <article_title>latexmk: Fully automated LaTeX document generation</article_title>
+    <additionalcontent>
+      <url cited="2024-09-03">https://ctan.org/pkg/latexmk</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <contributors>
+      <person_name contributor_role="author" sequence="first">
+        <surname>Forgejo</surname>
+      </person_name>
+    </contributors>
+    <article_title>Forgejo Repository</article_title>
+    <additionalcontent>
+      <url cited="2024-07-27">https://codeberg.org/forgejo/forgejo</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <article_title>Using Forgejo Actions (Self-hosted)</article_title>
+    <additionalcontent>
+      <url cited="2024-09-10">https://docs.codeberg.org/ci/actions/</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <article_title>GitLab Workflow template for LaTeX documents</article_title>
+    <additionalcontent>
+      <url cited="2024-09-10">https://gitlab.com/islandoftex/texmf/tug2024-workflow-document-gitlab</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <article_title>TeX Live Docker image</article_title>
+    <additionalcontent>
+      <url cited="2024-07-20">https://gitlab.com/islandoftex/images/texlive</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <article_title>DEPP: Dependency Printer for TeX Live</article_title>
+    <additionalcontent>
+      <url cited="2024-09-15">https://gitlab.com/islandoftex/texmf/depp</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <contributors>
+      <person_name contributor_role="author" sequence="first">
+        <given_name>Oliver</given_name>
+        <surname>Kopp</surname>
+      </person_name>
+    </contributors>
+    <article_title>File tl_packages</article_title>
+    <additionalcontent>
+      <url cited="2024-09-15">https://github.com/islandoftex/tug2024-workflow-document-github/blob/main/.github/tl_packages</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <contributors>
+      <person_name contributor_role="author" sequence="first">
+        <given_name>Marcel</given_name>
+        <surname>Krüger</surname>
+      </person_name>
+    </contributors>
+    <article_title>teatimeguest/setup-texlive-action: A GitHub Action to set up TeX Live</article_title>
+    <additionalcontent>
+      <url cited="2024-09-15">https://github.com/zauguin/install-texlive</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <article_title>teatimeguest/setup-texlive-action repository</article_title>
+    <additionalcontent>
+      <url cited="2024-09-15">https://github.com/teatimeguest/setup-texlive-action</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <contributors>
+      <person_name contributor_role="author" sequence="first">
+        <given_name>Marei</given_name>
+        <surname>Peischl</surname>
+      </person_name>
+    </contributors>
+    <article_title>File minimal-portable-tl-setup.sh</article_title>
+    <additionalcontent>
+      <url cited="2024-09-16">https://gitlab.com/islandoftex/texmf/depp/-/blob/main/setup-examples/texlive-minimal-portable/minimal-portable-tl-setup.sh</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <contributors>
+      <person_name contributor_role="author" sequence="first">
+        <given_name>Marcel</given_name>
+        <surname>Krüger</surname>
+      </person_name>
+    </contributors>
+    <article_title>zauguin/l3build-failure-artifacts</article_title>
+    <additionalcontent>
+      <url cited="2024-09-16">https://github.com/zauguin/l3build-failure-artifacts</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <article_title>nektos/act: Run your GitHub Actions locally</article_title>
+    <additionalcontent>
+      <url cited="2024-09-16">https://github.com/nektos/act</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <article_title>Pretesting TeX Live 2024</article_title>
+    <additionalcontent>
+      <url cited="2024-09-16">https://www.tug.org/texlive/pretest.html</url>
+    </additionalcontent>
+  </citation>
+</citation_list>

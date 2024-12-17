@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<citation_list xmlns:bltx="http://biblatex-biber.sourceforge.net/biblatexml">
+  <citation>
+    <contributors>
+      <person_name contributor_role="author" sequence="first">
+        <given_name>Frank</given_name>
+        <surname>Mittelbach</surname>
+      </person_name>
+      <person_name contributor_role="author" sequence="additional">
+        <given_name>Ulrike</given_name>
+        <surname>Fischer</surname>
+      </person_name>
+      <person_name contributor_role="author" sequence="additional">
+        <given_name>Chris</given_name>
+        <surname>Rowley</surname>
+      </person_name>
+    </contributors>
+    <cYear>2022</cYear>
+    <article_title>LaTeX Tagged PDF Feasibility Evaluation</article_title>
+    <additionalcontent>
+      <url cited="2024-11-25">https://www.latex-project.org/publications/2020-tagged-pdf-feasibility.pdf</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <doi>10.47397/tb/45-2/tb140ruckert-profiler</doi>
+  </citation>
+  <citation>
+    <contributors>
+      <person_name contributor_role="author" sequence="first">
+        <given_name>Vít</given_name>
+        <surname>
+          Starý
+          Novotný
+        </surname>
+      </person_name>
+    </contributors>
+    <cYear>2024</cYear>
+    <article_title>Markdown themes in practice</article_title>
+    <additionalcontent>
+      <url cited="2024-11-18">https://www.tug.org/tug2024/slides/starynovotny-markdown-themes.pdf</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <doi>10.47397/tb/45-2/tb140starynovotny-markdown-themes</doi>
+  </citation>
+  <citation>
+    <doi>10.47397/tb/45-2/tb140peischl-pipeline</doi>
+  </citation>
+  <citation>
+    <contributors>
+      <person_name contributor_role="author" sequence="first">
+        <given_name>Michal</given_name>
+        <surname>Hoftich</surname>
+      </person_name>
+    </contributors>
+    <cYear>2024</cYear>
+    <article_title>Web page to PDF conversion with Rmodepdf: Leveraging LuaLaTeX for e-book reader-friendly documents</article_title>
+    <additionalcontent>
+      <url cited="2024-11-18">https://www.tug.org/tug2024/slides/hoftich-rmodepdf.pdf</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <doi>10.47397/tb/45-2/tb140hoftich-rmodepdf</doi>
+  </citation>
+  <citation>
+    <contributors>
+      <person_name contributor_role="author" sequence="first">
+        <given_name>Ondřej</given_name>
+        <surname>Sojka</surname>
+      </person_name>
+    </contributors>
+    <cYear>2024</cYear>
+    <article_title>Expanding hyphenation patterns across Slavic languages</article_title>
+    <additionalcontent>
+      <url cited="2024-11-18">https://www.tug.org/tug2024/slides/sojka-slavic.pdf</url>
+    </additionalcontent>
+  </citation>
+  <citation>
+    <doi>10.47397/tb/45-2/tb140sojka-slavic</doi>
+  </citation>
+  <citation>
+    <article_title>TUG 2024 Lectures</article_title>
+    <additionalcontent>
+      <url cited="2024-11-25">https://www.youtube.com/playlist?list=PLLt9mKFAx-FZCy6aqYbXSNyaAkr8Nv14X</url>
+    </additionalcontent>
+  </citation>
+</citation_list>

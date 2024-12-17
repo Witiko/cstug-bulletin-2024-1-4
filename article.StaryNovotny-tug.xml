@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article doi="1" language="cs" publication_type="full_text"
+         xmlns:xi="http://www.w3.org/2001/XInclude">
+  <titles>
+    <title><CSTUG/> na konferenci TUG 2024</title>
+  </titles>
+  <contributors>
+    <person_name contributor_role="author" sequence="first">
+      <given_name>Vít</given_name>
+      <surname>Starý Novotný</surname>
+    </person_name>
+    <person_name contributor_role="author" sequence="additional">
+      <given_name>Michal</given_name>
+      <surname>Hoftich</surname>
+    </person_name>
+    <person_name contributor_role="author" sequence="additional">
+      <given_name>Jaromír</given_name>
+      <surname>Kuben</surname>
+    </person_name>
+  </contributors>
+  <pages>
+    <first_page>1</first_page>
+    <last_page>6</last_page>
+  </pages>
+  <additional-content>
+    <abstract>
+      <para>
+        Článek pojednává o účasti členů sdružení <CSTUG/> na konferenci TUG 2024 v Praze.
+      </para>
+    </abstract>
+    <title><CSTUG/> at the TUG 2024 Conference</title>
+    <abstract>
+      <para>
+        This article reports on the participation of <CSTUG/> members at TUG 2024 in Prague.
+      </para>
+    </abstract>
+  </additional-content>
+  <xi:include href="citations.StaryNovotny-tug.xml"/>
+</article>

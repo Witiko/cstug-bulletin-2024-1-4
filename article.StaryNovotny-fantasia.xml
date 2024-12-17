@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article doi="7" language="cs" publication_type="full_text"
+         xmlns:xi="http://www.w3.org/2001/XInclude">
+  <titles>
+    <title>Příprava videozáznamu české premiéry multimediálního díla „Fantasia Apocalyptica“</title>
+  </titles>
+  <contributors>
+    <person_name contributor_role="author" sequence="first">
+      <given_name>Vít</given_name>
+      <surname>Starý Novotný</surname>
+    </person_name>
+  </contributors>
+  <pages>
+    <first_page>7</first_page>
+    <last_page>27</last_page>
+  </pages>
+  <additional-content>
+    <abstract>
+      <para>
+        Dne 11. října 2019 se při příležitosti oslav 25. výročí založení
+        Fakulty informatiky Masarykovy univerzity uskutečnila česká premiéra
+        multimediálního díla „Fantasia Apocalyptica“ za osobní účasti autora,
+        Donalda Knutha. Z představení byl pořízen záznam, který je dostupný na
+        kanálu YouTube Fakulty informatiky.
+      </para>
+      <para>
+        V tomto článku popisuji přípravu záznamu od akvizice a zpracování
+        surových audiovizuálních dat přes přípravu replik panelů
+        doprovázejících představení po spojení jednotlivých částí do výsledného
+        záznamu. S výjimkou střihu úvodního slova a závěru, navýšení rozlišení
+        videa a zúžení dynamického rozsahu zvuku proběhlo zpracování pomocí
+        svobodných nástrojů jako <TeX/>, Audacity, Aegisub, FFmpeg, MLT, PDFtk
+        a ImageMagick. V článku ukazuji užití těchto nástrojů.
+      </para>
+    </abstract>
+    <title>Recording the Czech premiere of the “Fantasia Apocalyptica” multimedia work</title>
+    <abstract>
+      <para>
+        On October 11, 2019, the Czech premiere of the “Fantasia Apocalyptica”
+        multimedia work was held for the 25th anniversary of Masaryk
+        University's Faculty of Informatics, featuring its author, Donald
+        Knuth. A video recording of the performance was taken and published at
+        the YouTube channel of the Faculty of Informatics.
+      </para>
+      <para>
+        In this article, I describe how the recording was prepared from
+        processing the raw footage through replicating the panels that
+        accompanied the performance to the final composition. Apart from
+        super-resolution imaging, the editing of the intro and the wrap-up,
+        and the compression of sound, only free open-source tools like <TeX/>,
+        Audacity, Aegisub, FFmpeg, MLT, PDFtk, and ImageMagick were used. In
+        the article, I describe how readers can use these tools for their own
+        recordings.
+      </para>
+    </abstract>
+  </additional-content>
+  <xi:include href="citations.StaryNovotny-fantasia.xml"/>
+</article>

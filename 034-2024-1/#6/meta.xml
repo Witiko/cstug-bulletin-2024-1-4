@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article>
+  <title lang="cze">Příprava (La)TeXových dokumentů v cloudu</title>
+  <title lang="eng">Creation of LaTeX documents using a cloud-based pipeline</title>
+  <author order="1">Peischl, Marei</author>
+  <author order="2">Krüger, Marcel</author>
+  <author order="3">Kopp, Oliver</author>
+  <language>cze</language>
+  <summary lang="cze">Používání webových služeb pro kolaborativní přípravu dokumentů v (La)TeXu je dnes běžné, ale tyto nástroje se zaměřují na psaní dokumentů, nikoliv na tvorbu šablon nebo balíčků. Používání serverů pro průběžnou integraci a doručení je běžné ve vývoji softwaru, ale může být snadno přizpůsobeno pro TeX a přátele.
+
+Tento článek ukazuje, jak začít s používáním automatizace na webových službách jako GitHub, Forgejo nebo GitLab, a to jak pro autory dokumentů, tak pro vývojáře (La)TeX ových balíčků.</summary>
+  <summary lang="eng">Using web-based platforms for collaborative editing of LaTeX documents is common these days. These tools focus on writing documents and not on creation of templates or packages. Using build servers with automated pipelines is common within software development but can easily be adapted for TeX &amp; friends.
+
+This article will show how to get started using automated workflows on platforms like GitHub, Forgejo, or GitLab for document authors as well as TeX developers.</summary>
+  <lang_summary>cze</lang_summary>
+  <doi>10.5300/2024-1-4/59</doi>
+  <category>informatics</category>
+  <range_pages>59-72</range_pages>
+</article>

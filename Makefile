@@ -15,6 +15,7 @@ PDFLATEX_2020 = $(DOCKER_RUN) texlive/texlive:TL2020-historic-with-cache pdflate
 PDFLATEX_2023 = $(DOCKER_RUN) texlive/texlive:TL2023-historic-with-cache pdflatex
 LATEXMK = $(DOCKER_RUN) texlive/texlive:TL2020-historic-with-cache latexmk
 PDFTK = $(DOCKER_RUN) mnuessler/pdftk
+EXTRACT_CITATIONS = $(DOCKER_RUN) texlive/texlive:TL2023-historic-with-cache-xml make -f ../extract-citations/extract-citations.mk -C
 PARALLEL = parallel --joblog joblog --halt now,fail=1 --jobs 0 --
 
 FONTS = matha8.pfb matha9.pfb matha10.pfb mathb10.pfb
@@ -40,24 +41,31 @@ $(PARALLEL) 'make -f ../{} -C {= s:^Makefile\.:: =}/ all' ::: Makefile.*
 $(PDFLATEX_2020) $<
 endef
 
+define extract-citations
+$(PARALLEL) '$(EXTRACT_CITATIONS) {= s:^Makefile\.:: =}' ::: Makefile.*
+endef
+
 images: FORCE
 	$(DOCKER) build . -f Dockerfile.TL2020 -t texlive/texlive:TL2020-historic-with-cache
 	$(DOCKER) build . -f Dockerfile.TL2022 -t texlive/texlive:TL2022-historic-with-cache
 	$(DOCKER) build . -f Dockerfile.TL2022.StaryNovotny-fantasia -t texlive/texlive:TL2022-historic-with-cache-fantasia
 	$(DOCKER) build . -f Dockerfile.TL2023 -t texlive/texlive:TL2023-historic-with-cache
-	$(DOCKER) build . -f Dockerfile.TL2024 -t texlive/texlive:TL2024-historic-with-cache
+	$(DOCKER) build . -f Dockerfile.TL2023.extract-citations -t texlive/texlive:TL2023-historic-with-cache-xml
 
 bul.pdf: bul.tex $(FONTS) FORCE
 	$(LATEXMK) -c $<
 	$(clear-and-typeset)
 	$(typeset)
 	$(typeset)
+	$(extract-citations)
 
 bul-web.pdf: bul-web.tex bul.tex $(FONTS) FORCE
 	$(LATEXMK) -c $<
 	$(clear-and-typeset)
 	$(typeset)
 	$(typeset)
+	$(PDFTK) bul-web.pdf cat 1-13 14left 15right 16-17 18left 19-20 21right 22 23right 24left 25 26left 27-end output bul-web-rotated.pdf
+	mv bul-web-rotated.pdf bul-web.pdf
 
 bul-engtoc.pdf: bul.pdf
 	$(PDFTK) $< cat end output $@
@@ -93,8 +101,9 @@ test:
 
 test-xml:
 	xmllint --xinclude --noout --relaxng bulletin.rng bulletin.xml
-	! grep '[\\~{}]' bulletin.xml */article.xml */citations.xml  # Ensure no TeX-like characters
-	! grep -F '<citation/>' */article.xml */citations.xml  # Ensure no empty citations
+	! grep '[\\~{}]' bulletin.xml article.*.xml citations.*.xml  # Ensure no TeX-like characters
+	! grep -- '--' bulletin.xml article.*.xml citations.*.xml
+	! grep -F '<citation/>' article.*.xml citations.*.xml  # Ensure no empty citations
 
 test-preprint:
 	(( $$(pdfinfo bul-obalka-coated_fogra39.pdf | grep 'Pages:' | awk '{print $$2}') == 4))

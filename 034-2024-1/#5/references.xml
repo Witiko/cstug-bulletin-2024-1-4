@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<references>
+  <reference id="1">
+    <prefix>[1]</prefix>
+    <title>Profiling TeX input files</title>
+    <authors>
+      <author>Ruckert, Martin</author>
+    </authors>
+    <ISSN>0896-3207</ISSN>
+    <URL>https://dx.doi.org/10.47397/tb/45-2/tb140ruckert-profiler</URL>
+    <number>2</number>
+    <pages>203-210</pages>
+    <publisher>TeX Users Group</publisher>
+    <volume>45</volume>
+    <year>2024</year>
+    <suffix>Dostupné z DOI: 10.47397/tb/45-2/tb140ruckert-profiler.</suffix>
+  </reference>
+  <reference id="2">
+    <prefix>[2]</prefix>
+    <title>Various translations of the Bible, typeset in TeX</title>
+    <authors>
+      <author>Allred, Sean</author>
+    </authors>
+    <URL>https://github.com/vermiculus/bible</URL>
+    <suffix>[online]. [cit. 2024-08-23]. Dostupné z: https://github.com/vermiculus/bible.</suffix>
+  </reference>
+</references>
